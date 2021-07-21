@@ -1,0 +1,25 @@
+.navbar {
+  border: solid black;
+  background-color: blue;
+}
+
+body {
+  background-color: orange;
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+}
+.navbar__anchortag {
+  color: red;
+  padding: 0 0.5rem 0 0.5rem;
+  text-decoration: none;
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

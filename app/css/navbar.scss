@@ -1,0 +1,12 @@
+.navbar{
+   
+  &__list{
+      display: flex;
+    list-style: none;
+    }  
+  &__anchortag{
+      color: red;
+      padding: 0 0.5rem 0 0.5rem;
+    text-decoration: none;
+  }
+}
