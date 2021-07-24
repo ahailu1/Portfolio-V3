@@ -1,0 +1,63 @@
+.home{
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary-color;
+    height: 150vh;
+    z-index: 500;
+    padding: 2rem 0 0 8rem;
+    align-items: start;
+
+&__left{
+    padding: 2rem 2rem 0 4rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+
+}
+}
+
+.home{
+&__text{
+    font-size: 1.75rem !important;
+    color: $third-color;
+    font-weight: 800;
+    white-space: nowrap;
+    margin: 0.5rem 0 0 0;
+    &.two{
+        display: flex;
+        flex-wrap: wrap;
+    }
+&__span{
+    color: $secondary-color;
+    font-size: 4rem;
+
+    font-weight: 800;
+    &__portfolio {
+        margin: 1.5rem 0 0 0;
+        font-size: 4rem;
+        border-radius: 0.35rem;
+        box-shadow: 0 0 6px 0 $secondary-color;
+        border: solid $secondary-color;
+        padding: 1rem;
+        color: lighten($third-color, 5%);
+        font-weight: 800;
+    }
+
+}
+}
+&__right{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+}
+
+.myimage{
+    height: 35rem;
+    width: 35rem;
+    transform: rotateZ(45deg) rotate3d(185deg);
+}

@@ -1,12 +1,20 @@
 .navbar{
-   
+    background-color: $primary-color;
+padding: 1.75rem;
+display: flex;
+justify-content: flex-end;
   &__list{
       display: flex;
     list-style: none;
     }  
   &__anchortag{
-      color: red;
-      padding: 0 0.5rem 0 0.5rem;
-    text-decoration: none;
+    font-weight: 700;
+    border: solid white 2px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 4px 0 $third-color;
+      color: lighten($secondary-color, 5%);
+    margin: 0 0.5rem 0 0.5rem;
+      text-decoration: none;
   }
 }

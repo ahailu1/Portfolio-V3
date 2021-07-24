@@ -1,25 +1,124 @@
 .navbar {
-  border: solid black;
-  background-color: blue;
+  background-color: #030014;
+  padding: 1.75rem;
+  display: flex;
+  justify-content: flex-end;
 }
-
-body {
-  background-color: orange;
-}
-
 .navbar__list {
   display: flex;
   list-style: none;
 }
 .navbar__anchortag {
-  color: red;
-  padding: 0 0.5rem 0 0.5rem;
+  font-weight: 700;
+  border: solid white 2px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 4px 0 #e7e7e7;
+  color: #ff5454;
+  margin: 0 0.5rem 0 0.5rem;
   text-decoration: none;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  background-color: #030014;
+  height: 150vh;
+  z-index: 500;
+  padding: 2rem 0 0 8rem;
+  align-items: start;
+}
+.home__left {
+  padding: 2rem 2rem 0 4rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home__text {
+  font-size: 1.75rem !important;
+  color: #e7e7e7;
+  font-weight: 800;
+  white-space: nowrap;
+  margin: 0.5rem 0 0 0;
+}
+.home__text.two {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__text__span {
+  color: #ff3a3a;
+  font-size: 4rem;
+  font-weight: 800;
+}
+.home__text__span__portfolio {
+  margin: 1.5rem 0 0 0;
+  font-size: 4rem;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 6px 0 #ff3a3a;
+  border: solid #ff3a3a;
+  padding: 1rem;
+  color: #f4f4f4;
+  font-weight: 800;
+}
+.home__right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.myimage {
+  height: 35rem;
+  width: 35rem;
+  transform: rotateZ(45deg) rotate3d(185deg);
 }
 
 *, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  background-color: #030014;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  z-index: 75;
+}
+.sidebar__icon {
+  color: #ff5454;
+  font-size: 1.75rem;
+  margin: 0.75rem 0 0.75rem;
+}
+.sidebar__separator {
+  background-color: #e7e7e7;
+  box-shadow: 0 0 3px 0 #e7e7e7;
+  height: 30%;
+  margin: 1rem 0 1rem 0;
+  width: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.sidebar__anchortag {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  color: #ff3a3a;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=index.css.map */

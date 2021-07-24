@@ -1,8 +1,4 @@
-.navbar {
-    border: solid black;
-    background-color: blue;
-  }
-  body {
-    background-color: orange;
-  }
-  
+$primary-color: #030014;
+$secondary-color: #ff3a3a;
+$third-color: #e7e7e7;
+$fourth-color:lighten($secondary-color, 5%);
