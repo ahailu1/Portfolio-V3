@@ -1,14 +1,13 @@
 .sidebar{
     position: fixed;
-    left: 0;
-    height: 100vh;
-    top: 0;
-    background-color: $primary-color;
+    width: 100px;
+    height: 100%;
+    margin: 0 0 0 0;
     display: flex;
+    top: 0;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
-    padding: 1rem;
     z-index: 75;
     //border-right: solid $third-color;
 &__icon{
@@ -20,12 +19,10 @@
     background-color: $third-color;
     box-shadow: 0 0 3px 0 $third-color;
     height: 30%;
-    margin: 1rem 0 1rem 0;
-    width: 0.2rem;
+    margin: 1rem 0 1.5rem 0;
+    width: 3.5px;
     display: flex;
-    justify-content: center;
     align-self: center;
-
 }
 
 

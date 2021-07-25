@@ -21,18 +21,18 @@
 
 .home {
   display: flex;
-  justify-content: space-between;
-  background-color: #030014;
-  height: 150vh;
+  justify-content: center;
   z-index: 500;
-  padding: 2rem 0 0 8rem;
-  align-items: start;
+  padding: 3rem;
+  margin: 0 0 0 100px;
+  height: 100vh;
+  width: 80%;
 }
 .home__left {
-  padding: 2rem 2rem 0 4rem;
   width: 50%;
   display: flex;
   justify-content: center;
+  padding: 3rem 0 0 3rem;
   flex-direction: column;
 }
 
@@ -77,9 +77,11 @@
 
 *, body {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0rem;
+  background-color: #030014;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  color: #e7e7e7;
 }
 
 body {
@@ -88,15 +90,14 @@ body {
 
 .sidebar {
   position: fixed;
-  left: 0;
-  height: 100vh;
-  top: 0;
-  background-color: #030014;
+  width: 100px;
+  height: 100%;
+  margin: 0 0 0 0;
   display: flex;
+  top: 0;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
-  padding: 1rem;
   z-index: 75;
 }
 .sidebar__icon {
@@ -108,10 +109,9 @@ body {
   background-color: #e7e7e7;
   box-shadow: 0 0 3px 0 #e7e7e7;
   height: 30%;
-  margin: 1rem 0 1rem 0;
-  width: 0.2rem;
+  margin: 1rem 0 1.5rem 0;
+  width: 3.5px;
   display: flex;
-  justify-content: center;
   align-self: center;
 }
 .sidebar__anchortag {
@@ -119,6 +119,66 @@ body {
   margin-bottom: 2rem;
   color: #ff3a3a;
   text-decoration: none;
+}
+
+.about {
+  display: flex;
+  margin: 0 0 0 100px;
+  padding: 0 0 0 4rem;
+  width: 80%;
+  justify-content: space-around;
+}
+.about__section {
+  width: 45%;
+}
+.about__skills {
+  border: solid #ff5454;
+  height: 20rem;
+  border-bottom: none;
+  width: 20rem;
+  position: relative;
+}
+.about__skills__title {
+  margin: 0 1rem 0 1rem;
+  position: absolute;
+  top: -5%;
+  right: 20%;
+}
+.about__skills__heading {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 1rem 0 1rem 0;
+  position: absolute;
+}
+.about__skills__heading.frontend {
+  top: 50%;
+  left: -10%;
+}
+.about__skills__heading.backend {
+  top: 50%;
+  right: -10%;
+}
+
+.about__header {
+  line-height: 4rem;
+  padding: 0rem 0 1rem 0;
+  margin: 0 0 1.25rem 0;
+  border-bottom: solid #ff5454 5px;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.about__paragraph {
+  font-weight: 300;
+  letter-spacing: 1.25px;
+  line-height: 1.75rem;
+}
+.about__icon {
+  font-size: 3rem;
+}
+
+.myimagez {
+  height: 25rem;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=index.css.map */

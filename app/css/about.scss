@@ -1,0 +1,66 @@
+.about{
+    display: flex;
+    margin: 0 0 0 100px;
+    padding: 0 0 0 4rem;
+    width: 80%;
+    justify-content: space-around;
+&__section{
+    width: 45%;
+}
+&__skills{
+    border: solid $fourth-color;
+    height: 20rem;
+    border-bottom: none;
+    width: 20rem;
+    position: relative;
+
+&__title{
+    margin: 0 1rem 0 1rem;
+position: absolute;
+top: -5%;
+right: 20%;
+}
+
+&__heading{
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1rem 0 1rem 0;
+    position: absolute;
+
+&.frontend{
+top: 50%;
+left: -10%;
+}
+&.backend{
+    top: 50%;
+    right: -10%;
+    
+}
+}
+
+}
+}
+
+.about{
+    &__header{
+        line-height: 4rem;
+        padding: 0rem 0 1rem 0;
+        margin: 0 0 1.25rem 0;
+        border-bottom: solid $fourth-color 5px;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    &__paragraph{
+        font-weight: 300;
+        letter-spacing: 1.25px;
+        line-height: 1.75rem;
+    }
+    &__icon{
+        font-size: 3rem;
+    }
+}
+
+.myimagez{
+    height: 25rem;
+    opacity: 0.5;
+}
