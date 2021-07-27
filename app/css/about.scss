@@ -4,40 +4,17 @@
     padding: 0 0 0 4rem;
     width: 80%;
     justify-content: space-around;
+&.skills{
+}
+
 &__section{
-    width: 45%;
-}
-&__skills{
-    border: solid $fourth-color;
-    height: 20rem;
-    border-bottom: none;
-    width: 20rem;
-    position: relative;
-
-&__title{
-    margin: 0 1rem 0 1rem;
-position: absolute;
-top: -5%;
-right: 20%;
-}
-
-&__heading{
-    font-weight: 700;
-    font-size: 1.25rem;
-    padding: 1rem 0 1rem 0;
-    position: absolute;
-
-&.frontend{
-top: 50%;
-left: -10%;
-}
-&.backend{
-    top: 50%;
-    right: -10%;
-    
-}
-}
-
+    padding: 5rem 0 5rem 0;
+    width: 80%;
+    &.skills{
+        width: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
 }
 }
 
@@ -63,4 +40,57 @@ left: -10%;
 .myimagez{
     height: 25rem;
     opacity: 0.5;
+}
+
+
+
+.about__skills{
+    width: 40vh;
+        border: solid $fourth-color;
+        border-bottom: none;
+        height: 50vh;
+        position: relative;
+    &__title{
+        margin: 0 1rem 0 1rem;
+    position: absolute;
+    top: -5%;
+    right: 20%;
+    }
+    
+    &__heading{
+        font-weight: 700;
+        font-size: 1.25rem;
+        padding: 1rem 0 1rem 0;
+        position: absolute;
+    &.frontend{
+    top: 30%;
+    left: -10%;
+    }
+    &.backend{
+        top: 30%;
+        right: -10%;
+        
+    }
+    }
+
+&__list{
+
+list-style: none;
+
+
+&__container{
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem 0 0.5rem;
+
+&.frontend{
+    left: -5%;
+}
+&.backend{
+    right: -5%;
+}
+
+}
+}
+
 }
