@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander Hailu Web Development Portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./app/images/mydesign.png" />
     <script src="https://kit.fontawesome.com/c1d12be143.js" crossorigin="anonymous"></script>
 
     <style>
@@ -12,8 +13,11 @@
       </style>
     <link rel="stylesheet" href="./app/src/index.css" />
   <script defer src="main.js"></script></head>
+  
   <body>
     <nav class = "navbar">
+      <img src = "./app/images/mydesign.png" class = "navbar__logo" />
+
         <ul class = "navbar__list">
             <li class = "navbar__list__item"><a href = # class = "navbar__anchortag">Home</a></li>
             <li class = "navbar__list__item"><a href = # class = "navbar__anchortag">About</a></li>
@@ -21,13 +25,14 @@
             <li class = "navbar__list__item"><a href = # class = "navbar__anchortag">Contact</a></li>
         </ul>
     </nav>
+
     <div class = "sidebar">
 
       <div><a href = # class = "sidebar__anchortag"><i class="fab fa-linkedin-in sidebar__icon"></i></i></a></div>
       <div><a href = # class = "sidebar__anchortag"><i class="fab fa-github sidebar__icon"></i></a></div>
       <div><a href = # class = "sidebar__anchortag"><i class="fab fa-instagram sidebar__icon"></i></a></div>
       <div><a href = # class = "sidebar__anchortag"><i class="fas fa-envelope sidebar__icon"></i></a></div>
-        <div class = "sidebar__separator"></div>
+      <div class = "sidebar__separator"></div>
     
       </div>   
 
@@ -44,9 +49,87 @@
         <p></p>
     </div>
       <div class = "home__right">
+        <!-----
+        <img src = './app/images/selfimg.png' class = "myimage" />
+        <img src = './app/images/spheretest.png' class = "image__sphere__medium" />
+        <img src = './app/images/anotherimg.png' class = "image__sphere__small" />
+        -->
 
-        <img src = './app/images/finalcopy.png' class = "myimage" />
-        <h1>bye world</h1>
+         <div class = "word__cloud">
+
+          <div class = "development__container">
+            
+            <div class = "heading__container__one">
+              <p class = "heading__development">Development</p> <p class = "heading__design">esign</p>
+            </div>
+
+              <div class = heading__container__two>
+                <br/>
+                <br/>
+                  <p class = "heading__two">JavaScript  </p>
+                  <p class = "heading__two">ReactJs  </p>
+                  <div class = "heading__container__two__child__one">
+                    <div>
+                      <p>Git</p> 
+                      <p>GitHub</p> 
+                      <p>Version Control</p> 
+                    </div>
+                    <div>
+                      <p>HTML5</p> 
+                      <p>Frameworks</p> 
+                      <p>github</p> 
+                    </div>
+                
+
+                  </div>
+                  <p class = "heading__four">Web</p>
+                    <div class = "heading__container__two__child">
+                      <p class = "heading__five">HTML5</p>
+                      <p class = "heading__five">Cloud</p>
+                      <p class = "heading__five">Tech</p>
+                      <p class = "heading__five">DEVOPS</p>
+
+                        <div>                      
+                          <p class = "">HTML5</p>
+                          <p class = "">CSS</p>
+                          <p class = "">BootStrap</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                  <div class = "heading__container__three">
+                    <div>
+                        <p>hello world</p>
+                        <p>hello world</p>
+                    </div>
+                      <div class = "heading__container__three__child">
+                        <p class = "heading__development">Analytics</p> <p class = "heading__design">PI</p>
+                      </div>
+                        <div>
+                        <p>hello world</p>  
+                        <p>hello world</p>  
+                        <p>hello world</p>  
+                        </div>
+                  </div>
+                  <div>
+                    <p>hello world</p>
+                    <p>web development</p>
+                    <p>web development</p>
+
+                    <p>web development</p>
+                    <p>web development</p>
+                    <p>web development</p>
+                    <p>web development</p>
+                      <div class = "heading__container__three__child">
+                        <p class = "heading__development">Analytics</p> <p class = "heading__design">PI</p>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+           </div>
+         </div>
       </div>
     </section>
     
@@ -74,7 +157,10 @@
 </div>
 </section>
 
-<section class = "about skills">
+<section class = "about__section__skills skills">
+
+<div class = "about__section__skills__title"> Technologies <i class="fas fa-level-down-alt"></i>  </div>
+
 
   <div class = "about__section skills">
 
@@ -93,17 +179,18 @@
           <ul class = "about__skills__list frontend" >
           <li>Javascript</li>
           <li>React</li>
-          <li>React</li>
-          <li>React</li>
+          <li>CSS3/SaSS</li>
+          <li>BootStrap <br/> (w/ React-Bootstrap)</li>
+          <li>AntDesign</li>
           </ul>
             </div>
           <div class = "about__skills__list__container backend">
             <ul class = "about__skills__list backend">
-              <li>Node</li>
-              <li>Express</li>
-              <li>React</li>
-              <li>React</li>
-              <li>React</li>
+              <li>NodeJs <br/>(Express Framework)</li>
+              <li>PostgreSQL</li>
+              <li>MySql</li>
+              <li>WebSockets</li>
+              <li>Python(NumPy)</li>
             </ul>
           </div>
 </div>
@@ -111,37 +198,143 @@
       
     <div class = "about__skills">
           <div class = about__skills__title>
-            <i class="fas fa-code about__icon"></i>
+            <i class="fas fa-tools about__icon tools"></i>          
           </div>
 
-            <div class = "about__skills__heading frontend"> 
-            Frontend
+            <div class = "about__skills__heading tools"> 
+            Tools
             </div>
               <div class = "about__skills__heading backend">  
-                <p>Backend  </p>
+                <p>Applications</p>
               </div>
-                <div class = "about__skills__list__container frontend">
-              <ul class = "about__skills__list frontend" >
-              <li>Javascript</li>
-              <li>React</li>
-              <li>React</li>
+                <div class = "about__skills__list__container tools">
+              <ul class = "about__skills__list tools" >
+              <li>Git</li>
+              <li>Cli</li>
+              <li>NPM</li>
               <li>React</li>
               </ul>
                 </div>
               <div class = "about__skills__list__container backend">
                 <ul class = "about__skills__list backend">
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>React</li>
-                  <li>React</li>
-                  <li>React</li>
+                  <li>Visual Studio Code</li>
+                  <li>Visual Studio</li>
+                  <li>Adobe(Photoshop, Illustrator)</li>
+                  <li>Docker</li>
+                  <li>Microsoft Azure</li>
+                  <li>Nginx</li>
+
+
                 </ul>
               </div>
     </div>
-    
+    <div class = "about__skills">
+      <div class = about__skills__title>
+        <i class="fas fa-lightbulb about__icon"></i>      </div>
+
+        <div class = "about__skills__heading"> 
+        Tools
+        </div>
+          <div class = "about__skills__heading backend">  
+            <p>Applications</p>
+          </div>
+            <div class = "about__skills__list__container frontend">
+          <ul class = "about__skills__list frontend" >
+          <li>OOP <br/>(Object Oriented Programming)</li>
+          <li>MVC</li>
+          <li>NPM</li>
+          <li>React</li>
+          </ul>
+            </div>
+          <div class = "about__skills__list__container backend">
+            <ul class = "about__skills__list backend">
+              <li>REST API Development</li>
+              <li>Visual Studio</li>
+              <li>Adobe (Photoshop, Illustrator)</li>
+              <li>Docker</li>
+              <li>Microsoft Azure</li>
+            </ul>
+          </div>
+        </div>
   </div>
 </section>
+<Section class = "projects">
+<div class = "projects__section">
+<div class = "projects__description one"> 
+      <p class = "projects__header">Chat Application</p>
+      <p class = "projects__paragraph">hello world this is a description of my projects safdjkasfd jsfdkjadfsjkdfsah fasdfdas <br/> kjsadfjsafdkjjhdafs andjk this power random any lorem ipsumita ads vaaaiosadk kjdasfjkasfdkjasfd </p>
+    <div class = "projects__item__container">
+      <span class = "projects__item">NodeJs</span>
+      <span class = "projects__item">ExpressJs</span>
+      <span class = "projects__item">ReactJs</span>
+      <span class = "projects__item">PostgreSQL</span> 
+      <span class = "projects__item">(S)CSS</span> 
+      <span class = "projects__item">AntDesign</span> 
+    </div>
+    <div> <a href = "#" class = "projects__icon__link"> <i class="fab fa-github projects__icon"></i></a>
+      <a href = "#" class = "projects__icon__link"> <i class="fas fa-link  projects__icon"></i></a>
+    </div>
+</div>
 
+<div class = "projects__section__image">
+  <div class = "projects__image__content">
+    <img src = './app/images/instachattergif.gif' class = "projects__image"/>
+  </div>
+</div>
+</div>
+</Section>
+<Section class = "projects">
+  <div class = "projects__section">
+  <div class = "projects__description one"> 
+        <p class = "projects__header">Chat Application</p>
+        <p class = "projects__paragraph">hello world this is a description of my projects safdjkasfd jsfdkjadfsjkdfsah fasdfdas <br/> kjsadfjsafdkjjhdafs andjk this power random any lorem ipsumita ads vaaaiosadk kjdasfjkasfdkjasfd </p>
+      <div class = "projects__item__container">
+        <span class = "projects__item">NodeJs</span>
+        <span class = "projects__item">ExpressJs</span>
+        <span class = "projects__item">ReactJs</span>
+        <span class = "projects__item">PostgreSQL</span> 
+        <span class = "projects__item">(S)CSS</span> 
+        <span class = "projects__item">AntDesign</span> 
+      </div>
+      <div> <a href = "#" class = "projects__icon__link"> <i class="fab fa-github projects__icon"></i></a>
+        <a href = "#" class = "projects__icon__link"> <i class="fas fa-link  projects__icon"></i></a>
+      </div>
+  </div>
+  
+  <div class = "projects__section__image">
+    <div class = "projects__image__content">
+      <img src = './app/images/instachattergif.gif' class = "projects__image"/>
+    </div>
+  </div>
+  </div>
+  </Section>
+<Footer class = "section__footer">
+  <div class = "section__footer__content">
+  <div class = "footer__icon">
+       <a href = "https://www.facebook.com/alex.hailu.16" target = "_blank"><i class="fab fa-facebook homepage__icon"></i></a>
+       <a href = "https://ca.linkedin.com/in/alexanderhailu" target = "_blank"><i class="fab fa-linkedin-in homepage__icon"></i></a>
+       <a href = "https://github.com/ahailu1" target = "_blank"><i class="fab fa-github homepage__icon"></i></a>
+  </div>
+          <div class = "footer__about">This project was made with Javascript, (S)CSS, and HTML.<br/> No frameworks or libraries were used in its creation :);</div>
+              <div class = "footer__links">
+                  <p><a href = "#Home" id = "footer__home">Home</a></p>
+                 <span class = "footer__divider">|</span>  </p>
+                 <p> <a href = "#About" id = "footer__about">About</a>  </p>
+                <p>    <span class = "footer__divider">|</span></a> </p>
+                <p>    <a href = "#Projects" id = "footer__projects"> Technology</a> </p>
+                <p>    <span class = "footer__divider">|</span> </p>
+                <p>    <a href = "#Contact" id = "footer__contact">Contact </a> </p>
+              </div>
+          </div>
+      <div class = "footer__copyright">
+      <p>Designed by Alexander Hailu</p>
+          <span>||</span>
+          <p>copyright 2020</p>
+      </div>
+      </div>
+  
+  </Footer>
+  
 
 </body>
 </html>

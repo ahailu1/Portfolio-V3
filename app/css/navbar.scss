@@ -1,8 +1,28 @@
 .navbar{
     background-color: $primary-color;
-padding: 1.75rem;
 display: flex;
-justify-content: flex-end;
+z-index: 500;
+width: 100%;
+justify-content: space-between;
+position: fixed;
+align-items: center;
+height: 5rem;
+&__logo{
+  background-color: transparent;
+  z-index: 50;
+  height: 4rem;
+  margin: 0 0 0 2rem;
+
+  top: 0;
+  &__container{
+    margin: 0 0 0 2rem;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 40%;
+  }
+}
+
   &__list{
       display: flex;
     list-style: none;
