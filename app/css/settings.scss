@@ -6,6 +6,22 @@
     color: $third-color;
 }
 body {
+    
+    scrollbar-color: $fifth-color;
 background-color: $primary-color;
     position: relative;
+}
+body::-webkit-scrollbar {
+    width: 0.9rem;
+    border-radius: 0.9rem;
+}
+ 
+body::-webkit-scrollbar-track {
+    border-radius: 0.9rem;
+    -webkit-box-shadow: inset 0 0 6px $fifth-color;
+}
+ 
+body::-webkit-scrollbar-thumb {
+    border-radius: 0.9rem;
+  background-color: lighten($fifth-color, 5%);
 }

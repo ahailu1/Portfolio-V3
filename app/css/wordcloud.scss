@@ -1,0 +1,277 @@
+.heading__container{
+    height: auto;
+    margin: 0 0 0 -2rem;
+    &__one{
+        display: flex;
+    }
+    &__two{
+        margin: 0 0 0 -2.25rem;
+    }
+    &__three{
+        display: flex;
+        flex-direction: column;
+    }
+  
+}
+
+.heading{
+    &__development{
+        writing-mode: vertical-rl;
+        text-orientation: upright;    
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    &__design{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: 800;
+
+    }
+    &__two{
+        font-weight: 800;
+        font-size: 3rem;
+        color: $third-color;
+        animation: dissapear infinite 5s ease-in-out;
+        margin: 0 0 0 -2rem;
+        &__group__zero{
+            font-size: 1rem;
+            font-weight: 800;
+            display: flex;
+            flex-direction: column;
+            margin: 0 -0.5 0 -1rem;
+            border: solid orange;
+        }
+    }
+    &__three{
+        writing-mode: vertical-rl;
+        text-orientation: upright;    
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+    &__four{
+        font-weight: 800;
+        font-size: 5rem;
+    }
+    &__five{
+        writing-mode: vertical-rl;
+        font-weight: 800;
+        font-size: 1.2rem;
+        text-orientation: mixed;
+    }
+    &__six{
+        letter-spacing: 2px;
+        writing-mode: vertical-rl;
+        font-weight: 800;
+        font-size: 2.15rem;
+        text-orientation: mixed;
+
+    }
+}
+.development{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    &__container{
+    display: flex;
+}
+
+
+&__content{
+    display: flex;
+}
+
+}
+.container__rotated{
+    &__git{
+        padding: 0 1rem 0 0.5rem;
+        margin: 0 0 0 -1rem;
+    }
+    &__node{
+        display: flex;
+    }
+}
+
+.group{
+    &__zero {
+        white-space: nowrap;
+        font-weight: 800;
+    }
+    &__one{
+        font-size: 1.15rem;
+        padding: 0 0.5rem 0 0;
+        font-weight: 400;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+    }
+    &__two{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+&__three{
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    display: flex;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+&__four{
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+&__six{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+}
+.group__container{
+    display: flex;
+    margin: 0 0 0 -2rem;
+    &__one{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__two{
+        display: flex;
+    }
+    &__three{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__four{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}
+
+#analytics{
+    writing-mode: vertical-rl;
+    text-orientation: upright;    
+font-weight: 800;
+    font-size: 2rem;
+}
+#web{
+    font-size: 6rem;
+    letter-spacing: 1.5px;
+}
+#python{
+    font-size: 2rem;
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    text-orientation: upright;    
+ 
+}
+#api {
+    font-size: 2rem;
+    font-weight: 800;
+}
+#nodejs{
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+#mysql, #postgresql{
+
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#development, #javascript, #web, #python, #analytics {
+    animation: dissapear infinite 5s ease-in-out;
+    color: $fourth-color;
+    transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+}
+#design, #git, #github,#python{
+    animation: groupone infinite 5s ease-in-out;
+}
+.group__zero, .group__one,.group__two {
+    animation: small infinite ease-in-out 6s;
+}
+
+@keyframes dissapear {
+    0% {
+        transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+    opacity: 0.9;
+    transform: scale(1.1);
+
+    }
+    50% {
+        transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+        transform: scale(0.9);
+
+        opacity: 0.75;
+    
+    }
+    
+    75% {
+        transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+        transform: scale(0.9);
+        opacity: 0.1;
+    
+    }
+    100% {
+        transition: all ease-in-out 1s;
+        transform: scale(1.1);
+    opacity: 0.3;
+    }
+    }
+    
+    
+    @keyframes groupone {
+        0% {
+            transform: scale(0.9);
+            transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+            color: $fourth-color;
+        opacity: 0.9;
+    
+            opacity: 0.2;
+            }
+            50% {
+                opacity: 0.55;
+            
+            }
+            
+            75% {
+                opacity: 0.9;
+            
+            }
+            100% {
+            opacity: 0.3;
+            }
+    }
+
+      
+    @keyframes small {
+        0% {
+            transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+        opacity: 0.9;
+        transform: scale(0.9);
+
+            }
+            50% {
+                transform: scale(1.1);
+
+                transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+
+                opacity: 0.2;
+            
+            }
+            
+            75% {
+                transform: scale(1.1);
+
+                transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+
+                opacity: 0.1;
+            
+            }
+            100% {
+                transform: scale(0.9);
+
+                transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+
+            opacity: 0.9;
+            }
+    }

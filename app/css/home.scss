@@ -1,14 +1,18 @@
 .home{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 500;
     padding:  0 0 0 8rem;
     margin: 0 0 0 100px;
+
     height: 100vh;
-    width: 90%;
+    width: 100%;
 &__left{
+    margin: 100px 0 0 0;
     width: 40%;
     display: flex;
+
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
@@ -16,9 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    margin: 0 0 0 5rem;
+    padding: 4rem 4rem 0 3rem;
 }
 }
 
@@ -51,151 +53,10 @@
 
 }
 }
-&__right{
-    display: flex;
-    clip-path: circle(50%);
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    position: relative;
 }
-
-}
-
-.myimage{
-    display: flex;
-    flex-shrink: 0.5;
-    position: absolute;
-    left: 0;
-    height: 35rem;
-    background-color: transparent;
-    z-index: 4;
-    opacity: 1;
-    width: 35rem;
-}
-.image__sphere{
-    &__medium {
-        opacity: 0;
-        position: absolute;
-        transform-origin: 15rem 15rem;
-        left: 10%;
-        z-index:2;
-        background-color: transparent;
-        height: 25rem;
-        width: 25rem;
-        transform: rotate(0deg);
-        transition: transform 6s linear;
-        animation:rotate 6s linear reverse infinite;
-    }
-    &__small{
-        opacity: 0;
-        position: absolute;
-        transform-origin: 16rem 13rem;
-        background-color: transparent;
-        height: 35rem;
-        width: 35rem;
-        left: 5%;
-        bottom: 0;
-        transform: rotate(0deg);
-        transition: transform 3s linear;
-        animation:smallcircle 6s linear reverse infinite;
-
-    }
-}
-@keyframes rotate {
-    100% { 
-        transform:rotate(-360deg); 
-} 
-}
-@keyframes smallcircle {
-    100% { 
-        transform:rotate(360deg); 
-} 
-}
-
-.development{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-&__container{
-    display: flex;
-}
-
-&__content{
-    display: flex;
-}
-
-}
-.home__right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.word__cloud{
-}
-.heading{
-    &__development{
-        writing-mode: vertical-rl;
-        text-orientation: upright;    
-        font-size: 2rem;
-        font-weight: 800;
-    }
-    &__design{
-        font-size: 2rem;
-        font-weight: 800;
-
-    }
-    &__two{
-        font-weight: 800;
-        font-size: 3em;
-        margin: 0 0 0 -2rem;
-    }
-    &__three{
-        writing-mode: vertical-rl;
-        text-orientation: upright;    
-        font-size: 1.5rem;
-        font-weight: 800;
-    }
-    &__four{
-        font-weight: 800;
-        font-size: 5rem;
-    }
-    &__five{
-        writing-mode: vertical-rl;
-        font-weight: 800;
-        font-size: 1.2rem;
-        text-orientation: upright;    
-
-    }
-}
-.heading__container{
-    border: solid orange;
-    height: auto;
-    margin: 0 0 0 -2rem;
-    &__one{
-        display: flex;
-    }
-    &__two{
-        margin: 0 0 0 -2.25rem;
-&__child{
-    justify-content: space-around;
-    display: flex;
-&__one{
-    display: flex;
-    justify-content: space-between;
-}
-}
-
-    }
-    &__three{
-     
-    
-    &__child{
-        display: flex;
-    }
-    }
-    &__five{
-        border: solid pink;
-        display: flex;
-    }
+.superscript{
+    font-size: 2rem;
+    color: $secondary-color;
+    margin: -1rem  1rem 1rem 1rem -1rem;
+    text-shadow: 1px 1px 2px $fourth-color;
 }
