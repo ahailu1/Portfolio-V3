@@ -2,13 +2,8 @@
     display: flex;
     margin: 0 0 0 100px;
     padding: 0 0 5rem 8rem;
-    width: 80%;
-
-    &.skills{
-}
-
+    width: 90%;
 &__section{
-    width: 50%;
     &.skills{
         width: 100%;
         justify-content: space-around;
@@ -35,21 +30,7 @@
 }
 }
 }
-
 .about{
-    &__header{
-        line-height: 4rem;
-        padding: 0rem 0 1rem 0;
-        margin: 0 0 4rem 0;
-        border-bottom: solid $fourth-color 5px;
-        font-size: 4rem;
-        font-weight: 700;
-    }
-    &__paragraph{
-        font-weight: 300;
-        letter-spacing: 1.25px;
-        line-height: 1.75rem;
-    }
     &__icon{
         background-color: $primary-color;
         padding: 0 0.75rem 0 0.75rem;
@@ -61,10 +42,6 @@
     } 
 }
 
-.myimagez{
-    height: 25rem;
-    opacity: 0.5;
-}
 
 
 
@@ -75,16 +52,16 @@
         border-bottom: none;
         height: 60vh;
         position: relative;
-    &__title{
+&__title{
         margin: 0 1rem 0 1rem;
     position: absolute;
     top: -5%;
     z-index: 500;
     right: 20%;
     background-color: $primary-color;
-    }
+}
     
-    &__heading{
+&__heading{
         font-weight: 700;
         background-color: $primary-color;
         font-size: 1.15rem;
@@ -96,10 +73,9 @@
     }
     &.backend{
         top: 30%;
-        right: -10%;
-        
+        right: -10%;       
     }
-    }
+}
 
 &__list{
     letter-spacing: 1px;
@@ -126,9 +102,7 @@ list-style: none;
 &.tools{
     left: -6%;
 }
-
 }
 }
-
 }
 
