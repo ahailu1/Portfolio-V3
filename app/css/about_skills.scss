@@ -1,8 +1,4 @@
 .about{
-    display: flex;
-    margin: 0 0 0 100px;
-    padding: 0 0 5rem 8rem;
-    width: 90%;
 &__section{
     &.skills{
         width: 100%;
@@ -12,7 +8,7 @@
 &__skills{
     flex-direction: column;
     margin: 0 0 0 100px;
-    padding: 0 0 8rem 8rem;
+    padding: 5rem 0 9rem 8rem;
     width:80%;
     align-items: center;
     display: flex;

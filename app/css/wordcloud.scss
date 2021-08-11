@@ -170,23 +170,30 @@ font-weight: 800;
 }
 
 .heading__zero,.heading__three, .heading__four {
-    animation: dissapear infinite 10s ease-in-out;
+    animation: dissapear infinite 6s ease-in-out;
     color: $secondary-color;
+    opacity: 0.1;
     transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
 }
 #design, #git, #github,#python{
+    opacity: 0.1;
     animation: groupone infinite 5s ease-in-out;
 }
 .group__zero, .group__one,.group__two {
+    opacity: 0.1;
+
     animation: small infinite ease-in-out 6s;
 }
 .group__three, .group__four {
+    opacity: 0.1;
+
     animation: dissapear infinite 3s ease-in-out;
 }
 .heading__four, .heading__five {
     animation: dissapear infinite 10s ease-in-out;
     color: $secondary-color;
     transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
+    opacity: 0.1;
 }
 
 .group__five,.group__six{

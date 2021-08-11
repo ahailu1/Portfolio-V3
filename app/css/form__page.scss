@@ -1,0 +1,81 @@
+.form{
+margin: 0 0 0 100px;
+display: flex;
+background-color: $fifth-color;
+min-height: 100vh;
+flex-direction: column;
+justify-content: center;
+padding: 5rem 0 5rem 0;
+align-items: center;
+&__content{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+&__heading{
+    font-weight: 800;
+    display: flex;
+    padding: 4rem 0 4rem 0;
+    justify-content: center;
+    font-size: 5rem;
+}
+&__button{
+    color: $secondary-color;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: $primary-color;
+    border: solid $fourth-color 2px;
+    box-shadow: 0 0 3px 0 $fourth-color;
+}
+}
+
+.input{
+    border: none;
+    padding: 0.5rem;
+font-weight: 600;
+color: $third-color;
+background-color: $fifth-color;
+
+&:focus,&:target,&:visited{
+border: none;
+outline: none;
+}
+    &__message{
+        height: 20rem;
+        width: auto;
+        resize: none;
+        border: solid $fourth-color;
+        display: flex;
+        width: 100%;
+        margin: 0 0 1rem 0;
+    &:focus{
+        
+        outline: none;
+        border: solid $fourth-color;
+        box-shadow: 0 0 5px 0 $secondary-color;
+    }
+    }
+
+}
+.input{
+    &__container{
+        border: solid red;
+        display: flex;
+        margin: 1rem 0 1rem 0;
+    }
+}
+.icon{
+    &__container{
+        border-radius: 0.35rem;
+        display: flex;
+        border: solid $fourth-color;
+    }
+}
+.form__icon{
+    border-right: solid $fourth-color;
+    font-size: 1.5rem;
+    color: $third-color;
+    background-color: $fourth-color;
+    padding: 0.5rem;
+}
