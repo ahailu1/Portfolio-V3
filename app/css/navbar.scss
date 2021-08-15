@@ -28,13 +28,21 @@
     list-style: none;
   }
   &__anchortag {
+    color: $fourth-color;
     font-weight: 700;
-    border: solid white 2px;
+    //background-color: $fourth-color;
+    //border: solid white 2px;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 4px 0 $third-color;
-    color: lighten($secondary-color, 5%);
+    //border-radius: 0.2rem;
+    //box-shadow: 0 0 4px 0 $third-color;
     margin: 0 0.5rem 0 0.5rem;
     text-decoration: none;
+  }
+}
+
+.navbar{
+ &__anchortag:hover{
+   transition: all ease-in-out 0.5s;
+    background-color: $third-color;
   }
 }

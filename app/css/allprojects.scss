@@ -1,0 +1,34 @@
+.all__projects{
+    margin: 0 0 0 100px;
+    display: flex;
+    padding: 8rem 0 5rem 8rem;
+    flex-direction: column;
+align-items: flex-start;
+position: relative;
+&::after {
+position: absolute;
+height: 100%;
+width: 100%;
+display: flex;
+content: '';
+top: 0;
+left: 0;
+    //background-image: url('../images/codingpic.jfif');
+    //background-repeat: no-repeat;
+        background-size: cover;
+    opacity: 0.1;
+    background-attachment: fixed;
+}
+&__heading{
+    width: 80%;
+    margin: 0 0 5rem 0;
+    padding: 2rem 0 2rem 0;
+    font-size: 4rem;
+    display: flex;
+    width: 40%;
+    line-height: 4rem;
+    border-bottom: solid $fourth-color 6px;
+    font-weight: 800;
+}    
+
+}

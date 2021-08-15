@@ -126,14 +126,16 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
 }
 .navbar__anchortag {
-  font-weight: 700;
-  border: solid white 2px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 4px 0 #e7e7e7;
   color: #ff5454;
+  font-weight: 700;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   margin: 0 0.5rem 0 0.5rem;
   text-decoration: none;
+}
+
+.navbar__anchortag:hover {
+  transition: all ease-in-out 0.5s;
+  background-color: #e7e7e7;
 }
 
 .home {
@@ -290,8 +292,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem 0 1rem 0;
   position: absolute;
 }
-.about__skills__heading.frontend,
-.about__skills__heading.tools {
+.about__skills__heading.frontend, .about__skills__heading.tools {
   top: 30%;
   left: -10%;
 }
@@ -326,7 +327,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hidden__component {
-  border: solid red;
   opacity: 0;
 }
 
@@ -342,7 +342,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  transition: 0.75s 0.75s all ease-in-out;
+  transition: 0.5s 0.75s all ease-in-out;
 }
 .about__section {
   width: 40%;
@@ -436,9 +436,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 0.2rem;
   flex-grow: 1;
 }
-.input:focus,
-.input:target,
-.input:visited {
+.input:focus, .input:target, .input:visited {
   box-shadow: 0px 0px 8px 0px #e7e7e7;
   outline: none;
 }
@@ -481,9 +479,7 @@ body::-webkit-scrollbar-thumb {
 .projects {
   height: auto;
   display: flex;
-  padding: 0 0 0 8rem;
   width: 80%;
-  margin: 0 0 0 100px;
   flex-direction: column;
 }
 .projects__section {
@@ -492,6 +488,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #10101f;
   justify-content: space-between;
   width: 100%;
+  box-shadow: 0 0 12px 0px #ff5454;
   margin: 2rem 0 2rem 0;
   border-radius: 0.45rem;
 }
@@ -840,6 +837,38 @@ body::-webkit-scrollbar-thumb {
 .group__five,
 .group__six {
   animation: small infinite ease-in-out 6s;
+}
+
+.all__projects {
+  margin: 0 0 0 100px;
+  display: flex;
+  padding: 8rem 0 5rem 8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.all__projects::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  content: "";
+  top: 0;
+  left: 0;
+  background-size: cover;
+  opacity: 0.1;
+  background-attachment: fixed;
+}
+.all__projects__heading {
+  width: 80%;
+  margin: 0 0 5rem 0;
+  padding: 2rem 0 2rem 0;
+  font-size: 4rem;
+  display: flex;
+  width: 40%;
+  line-height: 4rem;
+  border-bottom: solid #ff5454 6px;
+  font-weight: 800;
 }
 
 /*# sourceMappingURL=index.css.map */

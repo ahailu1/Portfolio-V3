@@ -1,17 +1,17 @@
 .projects {
   height: auto;
   display: flex;
-  padding: 0 0 0 8rem;
   width: 80%;
-  margin: 0 0 0 100px;
   flex-direction: column;
   &__section {
     padding: 8rem 3rem 8rem 3rem;
     display: flex;
-    background-color: #10101f;
+    //background-color: $fifth-color;
+    background-color: $fifth-color;
     justify-content: space-between;
     width: 100%;
-    //box-shadow: 0 0 9px 2px $secondary-color;
+    //border: solid $secondary-color 2px;
+    box-shadow: 0 0 12px 0px $fourth-color;
     margin: 2rem 0 2rem 0;
     border-radius: 0.45rem;
   }
