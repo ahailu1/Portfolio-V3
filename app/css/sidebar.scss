@@ -1,27 +1,27 @@
-.sidebar{
-    position: fixed;
-    width: 100px;
-    height: 100%;
-    margin: 0 0 0 0;
-    display: flex;
-    top: 0;
-    flex-direction: column;
-    background-color: $primary-color;
-    align-items: center;
-    justify-content: flex-end;
-    z-index: 20;
-    //border-right: solid $third-color;
-&__icon{
+.sidebar {
+  position: fixed;
+  width: 100px;
+  height: 100%;
+  margin: 0 0 0 0;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  background-color: $primary-color;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 20;
+  //border-right: solid $third-color;
+  &__icon {
     color: $fourth-color;
     font-size: 1.75rem;
     margin: 0.75rem 0 0.75rem;
-&:hover{
-    font-size: 2rem;
-    color: $third-color;
-    transition: all ease-in-out 0.25s;
-}
-}
-&__separator{
+    &:hover {
+      font-size: 2rem;
+      color: $third-color;
+      transition: all ease-in-out 0.25s;
+    }
+  }
+  &__separator {
     background-color: $third-color;
     box-shadow: 0 0 3px 0 $third-color;
     height: 30%;
@@ -29,13 +29,12 @@
     width: 3.5px;
     display: flex;
     align-self: center;
-}
+  }
 
-
-&__anchortag{
+  &__anchortag {
     padding: 0.5rem;
     margin-bottom: 2rem;
     color: $secondary-color;
     text-decoration: none;
-}
+  }
 }

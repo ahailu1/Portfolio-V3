@@ -1,81 +1,112 @@
-.form{
-margin: 0 0 0 100px;
-display: flex;
-background-color: $fifth-color;
-min-height: 100vh;
-flex-direction: column;
-justify-content: center;
-padding: 5rem 0 5rem 0;
-align-items: center;
-&__content{
-    align-items: center;
+.form {
+  &__wrapper {
+    display: flex;
+    margin: 0 0 0 100px;
+    padding: 10rem 0 10rem 8rem;
+    height: auto;
+  }
+  &__section {
+    width: 40%;
+  }
+}
+
+.form {
+  box-shadow: 0px 0 6px 0px $fourth-color;
+  display: flex;
+  padding: 5rem 0 5rem 0;
+  flex-direction: column;
+  border-radius: 0.35rem;
+  background-color: $fifth-color;
+  justify-content: center;
+  width: 85%;
+  align-items: center;
+  &__content {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-&__heading{
+  }
+  &__heading {
     font-weight: 800;
     display: flex;
     padding: 4rem 0 4rem 0;
+    color: $fourth-color;
+    opacity: 0.85;
     justify-content: center;
-    font-size: 5rem;
-}
-&__button{
+    text-shadow: 1px 3px 2px rgba(255, 85, 85, 0.5);
+    font-size: 4rem;
+  }
+  &__button {
+    font-weight: 800;
     color: $secondary-color;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.75rem 2rem 0.75rem 2rem;
     border-radius: 0.25rem;
-    background-color: $primary-color;
+    background-color: $fifth-color;
     border: solid $fourth-color 2px;
     box-shadow: 0 0 3px 0 $fourth-color;
-}
+    &:hover {
+      transition: all ease-in-out 0.25s;
+      background-color: $fourth-color;
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+    }
+  }
 }
 
-.input{
-    border: none;
-    padding: 0.5rem;
-font-weight: 600;
-color: $third-color;
-background-color: $fifth-color;
-
-&:focus,&:target,&:visited{
-border: none;
-outline: none;
-}
-    &__message{
-        height: 20rem;
-        width: auto;
-        resize: none;
-        border: solid $fourth-color;
-        display: flex;
-        width: 100%;
-        margin: 0 0 1rem 0;
-    &:focus{
-        
-        outline: none;
-        border: solid $fourth-color;
-        box-shadow: 0 0 5px 0 $secondary-color;
+.input {
+  border: none;
+  padding: 0.5rem;
+  font-weight: 600;
+  color: $third-color;
+  background-color: $fifth-color;
+  border-radius: 0.2rem;
+  flex-grow: 1;
+  &:focus,
+  &:target,
+  &:visited {
+    box-shadow: 0px 0px 8px 0px $third-color;
+    outline: none;
+  }
+  &__message {
+    height: 15rem;
+    width: auto;
+    resize: none;
+    border: solid $fourth-color;
+    display: flex;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    border-radius: 0.35rem;
+    &:focus {
+      border: solid $third-color;
+      box-shadow: 0 0 5px 0 $secondary-color;
     }
-    }
-
+  }
 }
-.input{
-    &__container{
-        border: solid red;
-        display: flex;
-        margin: 1rem 0 1rem 0;
-    }
+.input {
+  &__container {
+    border: solid red;
+    display: flex;
+    margin: 1rem 0 1rem 0;
+  }
 }
-.icon{
-    &__container{
-        border-radius: 0.35rem;
-        display: flex;
-        border: solid $fourth-color;
+.icon {
+  &__container {
+    width: 100%;
+    border-radius: 0.35rem;
+    display: flex;
+    box-shadow: 0 0 3px 0 $secondary-color;
+    border: solid $fourth-color;
+    &:target,
+    &:focus,
+    &:active {
     }
+  }
 }
-.form__icon{
-    border-right: solid $fourth-color;
-    font-size: 1.5rem;
-    color: $third-color;
-    background-color: $fourth-color;
-    padding: 0.5rem;
+.form__icon {
+  border-right: solid $fourth-color;
+  font-size: 1.5rem;
+  color: $third-color;
+  background-color: $fourth-color;
+  padding: 0.5rem;
 }

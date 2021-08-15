@@ -1,3 +1,4 @@
-import "../javascript/any";
-console.log("whats up ottawa");
-console.log("Hello World!");
+import a from "../javascript/any";
+import init from "../javascript/fade_in";
+
+init();

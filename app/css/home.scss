@@ -1,45 +1,44 @@
-.home{
-    display: flex;
-    justify-content: space-between;
-    z-index: 500;
-    padding:  10rem 0 15rem 8rem;
-    margin: 0 0 0 100px;
-    height: 105vh;
-&__left{
+.home {
+  display: flex;
+  justify-content: space-between;
+  z-index: 500;
+  padding: 10rem 0 15rem 8rem;
+  margin: 0 0 0 100px;
+  height: 105vh;
+  &__left {
     margin: 100px 0 0 0;
     width: 40%;
     display: flex;
-
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-}
-&__right{
+  }
+  &__right {
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
     align-items: center;
     padding: 4rem 4rem 0 2rem;
-}
+  }
 }
 
-.home{
-&__text{
+.home {
+  &__text {
     font-size: 1.75rem !important;
     color: $third-color;
     font-weight: 800;
     white-space: nowrap;
     margin: 0.5rem 0 0 0;
-    &.two{
-        display: flex;
-        flex-wrap: wrap;
+    &.two {
+      display: flex;
+      flex-wrap: wrap;
     }
-&__span{
-    color: $secondary-color;
-    font-size: 4rem;
+    &__span {
+      color: $secondary-color;
+      font-size: 4rem;
 
-    font-weight: 800;
-    &__portfolio {
+      font-weight: 800;
+      &__portfolio {
         margin: 1.5rem 0 0 0;
         font-size: 4rem;
         border-radius: 0.35rem;
@@ -48,17 +47,15 @@
         padding: 1rem;
         color: lighten($third-color, 5%);
         font-weight: 800;
+      }
     }
-
+  }
 }
+.superscript {
+  font-size: 2rem;
+  color: $secondary-color;
+  margin: -1rem 1rem 1rem 1rem -1rem;
+  text-shadow: 1px 1px 2px $fourth-color;
 }
-}
-.superscript{
-    font-size: 2rem;
-    color: $secondary-color;
-    margin: -1rem  1rem 1rem 1rem -1rem;
-    text-shadow: 1px 1px 2px $fourth-color;
-}
-.word__cloud{
-
+.word__cloud {
 }

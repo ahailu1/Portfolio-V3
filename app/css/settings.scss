@@ -1,27 +1,29 @@
-*, body{
-    margin: 0;
-    padding: 0 0 0 0rem;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-    color: $third-color;
+*,
+body {
+  margin: 0;
+  padding: 0 0 0 0rem;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: $third-color;
 }
 body {
-    
-    scrollbar-color: $fifth-color;
-background-color: $primary-color;
-    position: relative;
+  background-color: $primary-color;
+  background-attachment: fixed;
+  background-size: cover;
+  scrollbar-color: $fifth-color;
+  position: relative;
 }
 body::-webkit-scrollbar {
-    width: 0.9rem;
-    border-radius: 0.9rem;
+  background-color: $primary-color;
+  width: 0.9rem;
 }
- 
+
 body::-webkit-scrollbar-track {
-    border-radius: 0.9rem;
-    -webkit-box-shadow: inset 0 0 6px $fifth-color;
+  border-radius: 0.9rem;
+  -webkit-box-shadow: inset 0 0 6px $fifth-color;
 }
- 
+
 body::-webkit-scrollbar-thumb {
-    border-radius: 0.9rem;
+  border-radius: 0.9rem;
   background-color: lighten($fifth-color, 5%);
 }

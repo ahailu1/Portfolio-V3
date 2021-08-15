@@ -1,201 +1,202 @@
-.heading__container{
-    &__one{
-        display: flex;
-    }
-    &__two{
-        margin: 0 0 0 -2.25rem;
-    }
-    &__three{
-        display: flex;
-        flex-direction: column;
-    }
-  
-}
-
-.heading{
-    &__zero{
-        writing-mode: vertical-rl;
-        text-orientation: upright;    
-        font-size: 2.5rem;
-        font-weight: 800;
-    }
-    &__design{
-        display: flex;
-        flex-direction: column;
-        font-size: 2rem;
-        font-weight: 800;
-
-    }
-    &__two{
-        font-weight: 800;
-        font-size: 3rem;
-        color: $third-color;
-        animation: dissapear infinite 5s ease-in-out;
-        margin: 0 0 0 -2rem;
-        &__group__zero{
-            font-size: 1rem;
-            font-weight: 800;
-            display: flex;
-            flex-direction: column;
-            margin: 0 -0.5 0 -1rem;
-            border: solid orange;
-        }
-    }
-    &__three{
-        writing-mode: vertical-rl;
-        text-orientation: upright;    
-        font-size: 1.5rem;
-        font-weight: 800;
-    }
-    &__four{
-        font-weight: 800;
-        font-size: 5rem;
-    }
-    &__five{
-        writing-mode: vertical-rl;
-        font-weight: 800;
-        font-size: 1.2rem;
-        text-orientation: mixed;
-    }
-    &__six{
-        letter-spacing: 2px;
-        writing-mode: vertical-rl;
-        font-weight: 800;
-        font-size: 2.15rem;
-        text-orientation: mixed;
-
-    }
-}
-.development{
-    &__container{
+.heading__container {
+  &__one {
     display: flex;
+  }
+  &__two {
+    margin: 0 0 0 -2.25rem;
+  }
+  &__three {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+.heading {
+  &__zero {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+  &__design {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  &__two {
+    font-weight: 800;
+    font-size: 3rem;
+    color: $third-color;
+    animation: dissapear infinite 5s ease-in-out;
+    margin: 0 0 0 -2rem;
+    &__group__zero {
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      flex-direction: column;
+      margin: 0 -0.5 0 -1rem;
+      border: solid orange;
+    }
+  }
+  &__three {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  &__four {
+    font-weight: 800;
+    font-size: 5rem;
+  }
+  &__five {
+    writing-mode: vertical-rl;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-orientation: mixed;
+  }
+  &__six {
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    font-weight: 800;
+    font-size: 2.15rem;
+    text-orientation: mixed;
+  }
 }
-.container__rotated{
-    &__git{
-        padding: 0 1rem 0 0.5rem;
-        margin: 0 0 0 -1rem;
-    }
-    &__node{
-        display: flex;
-    }
+.development {
+  &__container {
+    display: flex;
+  }
+}
+.container__rotated {
+  &__git {
+    padding: 0 1rem 0 0.5rem;
+    margin: 0 0 0 -1rem;
+  }
+  &__node {
+    display: flex;
+  }
 }
 
-.group{
-    &__zero {
-        white-space: nowrap;
-        font-weight: 800;
-    }
-    &__one{
-        font-size: 1.15rem;
-        padding: 0 0.5rem 0 0;
-        font-weight: 400;
-        writing-mode: vertical-rl;
-        text-orientation: sideways;
-    }
-    &__two{
-        font-size: 1rem;
-        font-weight: 400;
-    }
-&__three{
+.group {
+  &__zero {
+    white-space: nowrap;
+    font-weight: 800;
+  }
+  &__one {
+    font-size: 1.15rem;
+    padding: 0 0.5rem 0 0;
+    font-weight: 400;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+  }
+  &__two {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  &__three {
     writing-mode: vertical-rl;
     text-orientation: sideways;
     display: flex;
     font-weight: 800;
     font-size: 1.25rem;
-}
-&__four{
+  }
+  &__four {
     font-weight: 800;
     font-size: 0.9rem;
-}
-&__six{
+  }
+  &__six {
     font-size: 1.25rem;
     font-weight: 400;
+  }
 }
-}
-.group__container{
+.group__container {
+  display: flex;
+  margin: 0 0 0 -2rem;
+  &__one {
     display: flex;
-    margin: 0 0 0 -2rem;
-    &__one{
-        display: flex;
-        justify-content: space-around;
-    }
-    &__two{
-        display: flex;
-    }
-    &__three{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-    &__four{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
+    justify-content: space-around;
+  }
+  &__two {
+    display: flex;
+  }
+  &__three {
+    padding: 0.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__four {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 
-#analytics{
-    writing-mode: vertical-rl;
-    text-orientation: upright;    
-font-weight: 800;
-    font-size: 2rem;
+#analytics {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-weight: 800;
+  font-size: 2rem;
 }
-#web{
-    font-size: 6rem;
-    letter-spacing: 1.5px;
+#web {
+  font-size: 6rem;
+  letter-spacing: 1.5px;
 }
-#python{
-    font-size: 2rem;
-    font-weight: 800;
-    writing-mode: vertical-rl;
-    text-orientation: upright;    
- 
-}
-#api {
-    font-size: 2rem;
-    font-weight: 800;
-}
-#nodejs{
-    font-size: 1.75rem;
-    font-weight: 800;
-}
-#mysql, #postgresql{
-
-    font-weight: 700;
-    font-size: 1.5rem;
+#python {
+  font-size: 2rem;
+  font-weight: 800;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }
 
-.heading__zero,.heading__three, .heading__four {
-    animation: dissapear infinite 6s ease-in-out;
-    color: $secondary-color;
-    opacity: 0.1;
-    transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
-}
-#design, #git, #github,#python{
-    opacity: 0.1;
-    animation: groupone infinite 5s ease-in-out;
-}
-.group__zero, .group__one,.group__two {
-    opacity: 0.1;
-
-    animation: small infinite ease-in-out 6s;
-}
-.group__three, .group__four {
-    opacity: 0.1;
-
-    animation: dissapear infinite 3s ease-in-out;
-}
-.heading__four, .heading__five {
-    animation: dissapear infinite 10s ease-in-out;
-    color: $secondary-color;
-    transition: all  0.5s cubic-bezier(.57,.93,.78,-0.01);
-    opacity: 0.1;
+#mysql,
+#postgresql,
+#api,
+#nodejs {
+  font-weight: 700;
+  font-size: 1.75rem;
 }
 
-.group__five,.group__six{
-    animation: small infinite ease-in-out 6s;
+.heading__zero,
+.heading__three,
+.heading__four,
+.heading__design {
+  animation: dissapear infinite 6s ease-in-out;
+  color: $secondary-color;
+  opacity: 0.1;
+  transition: all 3s ease-in-out;
+}
+#git,
+#github,
+#python {
+  opacity: 0.1;
+  animation: groupone infinite 5s ease-in-out;
+}
+.group__zero,
+.group__one,
+.group__two {
+  opacity: 0.1;
+
+  animation: small infinite ease-in-out 6s;
+}
+.group__three,
+.group__four {
+  opacity: 0.1;
+
+  animation: dissapear infinite 3s ease-in-out;
+}
+.heading__four,
+.heading__five {
+  animation: dissapear infinite 10s ease-in-out;
+  color: $secondary-color;
+  transition: all 0.5s cubic-bezier(0.57, 0.93, 0.78, -0.01);
+  opacity: 0.1;
+}
+
+.group__five,
+.group__six {
+  animation: small infinite ease-in-out 6s;
 }
