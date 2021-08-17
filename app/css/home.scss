@@ -1,24 +1,55 @@
 .home {
-  display: flex;
-  justify-content: space-between;
-  z-index: 500;
-  padding: 10rem 0 15rem 8rem;
-  margin: 0 0 0 100px;
-  height: 105vh;
-  &__left {
-    margin: 100px 0 0 0;
-    width: 40%;
+  @media(min-width:320px){
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    width: 100%;
     flex-direction: column;
+    padding: 5rem 0 5rem 0;
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  @media(min-width: 568px){
+    margin: 0 0 0 100px;
+    height: 105vh;
+
+  }
+  @media(min-width: 768px){
+    justify-content: space-between;
+    padding: 10rem 0 15rem 8rem;
+
+  }
+  &__left {
+    @media(min-width: 320px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 3rem 0 3rem 0;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @media(min-width: 568px){
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 100px 0 0 0;
+    }
   }
   &__right {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 4rem 4rem 0 2rem;
+    @media(min-width: 320px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5rem 0 5rem 0;
+    }
+    @media(min-width: 568px){
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 4rem 4rem 0 2rem;
+  
+    }
   }
 }
 
@@ -28,15 +59,24 @@
     color: $third-color;
     font-weight: 800;
     white-space: nowrap;
+    border: solid orange;
     margin: 0.5rem 0 0 0;
     &.two {
-      display: flex;
-      flex-wrap: wrap;
+      @media(min-width:320px){
+        display: flex;
+        margin: 0 0 0 -8rem;
+        border: solid orange;
+        flex-direction: column;
+      }
+    }
+    &__welcome{
+      @media(min-width:320px){
+        font-size: 2rem;
+      }
     }
     &__span {
       color: $secondary-color;
       font-size: 4rem;
-
       font-weight: 800;
       &__portfolio {
         margin: 1.5rem 0 0 0;

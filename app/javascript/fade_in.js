@@ -1,24 +1,36 @@
 var aboutTitle = document.getElementsByClassName("about__header")[0];
 var aboutSectionText = document.getElementsByClassName("about")[0];
+var technologyTitle = document.getElementsByClassName('about__section__skills__title')[0];
+var technologySectionText = document.getElementsByClassName('about__section skills')[0];
 
-var windowHeight = window.innerHeight;
+var framework = (title, section) => {
+  let documentHeight = window.innerHeight;
+  console.log(title);
+    let sectionTop = title.getBoundingClientRect().top;
+    if(documentHeight > sectionTop) {
+      title.style.opacity = '1'
+      section.style.opacity = '1';
+    } else {
+      title.style.opacity = '0'
+
+      section.style.opacity = '0';
+    }
+}
+
 let init = () => {
   document.addEventListener("scroll", (e) => {
+    framework(aboutTitle, aboutSectionText)    
+    framework(technologyTitle, technologySectionText)    
+
+    /*
+    var windowHeight = window.innerHeight;
     var top = aboutTitle.getBoundingClientRect().top;
-    console.log(aboutTitle);
-    console.log(aboutSectionText);
     if (top < windowHeight) {
       aboutSectionText.style.opacity = "1";
-
-      //if the section's top is less than the window height, it means that it is
-      //within the documents viewport
     } else {
       aboutSectionText.style.opacity = "0";
     }
-
-    console.log("hello");
-    console.log(windowHeight);
-    console.log(top);
+    */
   });
 };
 export default init;

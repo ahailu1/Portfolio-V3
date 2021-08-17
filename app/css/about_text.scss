@@ -4,7 +4,7 @@
   padding: 10rem 0 10rem 8rem;
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   opacity: 0;
   transition: 0.5s 0.75s all ease-in-out;
   &__section {
@@ -24,13 +24,14 @@
     line-height: 1.75rem;
   }
   &__image {
-    height: 25rem;
+    height: 22rem;
     width: auto;
   }
 }
 .about {
   &__section__image {
-    padding: 0 4rem 0 0;
+    padding: 0 4rem 0 5rem;
+    margin: 0 0 0 4rem;
     display: flex;
     justify-content: center;
     align-items: center;

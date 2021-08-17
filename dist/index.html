@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexander Hailu Web Development Portfolio</title>
+    <title>Alexander Hailu Tech Portfolio</title>
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -18,23 +18,25 @@
       @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
     </style>
     <link rel="stylesheet" href="../app/src/index.css" />
+  <script defer src="main.js"></script></head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" id = 'mynavbar'>
       <img src="../app/images/mydesign.png" class="navbar__logo" />
       <ul class="navbar__list">
         <li class="navbar__list__item">
-          <a href="#" class="navbar__anchortag">Home</a>
+          <a href="#Home" class="navbar__anchortag">Home</a>
         </li>
         <li class="navbar__list__item">
-          <a href="#" class="navbar__anchortag">About</a>
+          <a href="#About" class="navbar__anchortag">About</a>
         </li>
         <li class="navbar__list__item">
-          <a href="#" class="navbar__anchortag">Projects</a>
+          <a href="#Project" class="navbar__anchortag">Projects</a>
         </li>
         <li class="navbar__list__item">
-          <a href="#" class="navbar__anchortag">Contact</a>
+          <a href="#Contact" class="navbar__anchortag">Contact</a>
         </li>
       </ul>
+      <div class = "navbar__layer"></div>
     </nav>
     <div class="sidebar">
       <div>
@@ -78,7 +80,7 @@
         <br />
         <br />
         <div class="home__text two">
-          <div>Welcome to my Tech</div>
+          <div class = "home__text__welcome">Welcome to my Tech</div>
           <br />
           <p class="home__text__span__portfolio">
             Portfolio <sup class="superscript">V3</sup>
@@ -456,5 +458,4 @@
       </div>
     </footer>
   </body>
-  <script defer src="main.js"></script></head>
 </html>

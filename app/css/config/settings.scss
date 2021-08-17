@@ -1,3 +1,11 @@
+* {
+  @media (min-width:320px) {
+    font-size: 55%;
+  }
+  @media(min-width: 400px){
+    font-size: 65%;
+  }
+}
 *,
 body {
   margin: 0;
@@ -6,12 +14,19 @@ body {
   font-family: "Ubuntu", sans-serif;
   color: $third-color;
 }
+
+
 body {
-  background-color: $primary-color;
-  background-attachment: fixed;
-  background-size: cover;
-  scrollbar-color: $fifth-color;
-  position: relative;
+  @media(min-width: 320px) {
+    height: auto;
+    background-color: $primary-color;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
 }
 body::-webkit-scrollbar {
   background-color: $primary-color;
