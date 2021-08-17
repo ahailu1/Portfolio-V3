@@ -12,6 +12,7 @@
   @media(min-width: 568px){
     margin: 0 0 0 100px;
     height: 105vh;
+    flex-direction: row;
 
   }
   @media(min-width: 768px){
@@ -59,13 +60,11 @@
     color: $third-color;
     font-weight: 800;
     white-space: nowrap;
-    border: solid orange;
     margin: 0.5rem 0 0 0;
     &.two {
       @media(min-width:320px){
         display: flex;
         margin: 0 0 0 -8rem;
-        border: solid orange;
         flex-direction: column;
       }
     }
