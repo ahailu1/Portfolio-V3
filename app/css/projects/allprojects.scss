@@ -11,6 +11,7 @@
     align-items: center;
   }
   @media(min-width: 768px){
+    align-items: flex-start;
     width: auto;
     margin: 0 0 0 100px;
   }

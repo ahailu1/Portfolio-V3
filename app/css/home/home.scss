@@ -12,7 +12,6 @@
   @media (min-width: 768px) {
     margin: 0 0 0 100px;
     height: 105vh;
-    margin: auto;
     width: auto;
     padding: 5rem 0 5rem 0;
     align-items: center;
@@ -20,7 +19,11 @@
   }
   @media (min-width: 1024px) {
     flex-direction: row;
-    width: 90%;
+    justify-content: space-around;
+  }
+  @media(min-width: 1400px){
+    
+    margin: 0 0 0 200px;
   }
   &__left {
     @media (min-width: 320px) {
