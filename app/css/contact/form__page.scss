@@ -12,12 +12,14 @@
       height: auto;
     }
     @media(min-width: 768px){
-      width: 90%;
+      width: auto;
+      
       margin: 0 0 0 100px;
     }
     @media(min-width:968px){
     }
     @media(min-width: 1400px) {
+      
       margin: 0 0 0 200px;
     }
   }

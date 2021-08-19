@@ -20,7 +20,6 @@
       font-weight: 800;
     }
     @media(min-width: 768px){
-      border: solid orange;
     }
   }
   &__design {
@@ -53,12 +52,13 @@
     @media(min-width: 320px){
       font-weight: 800;
       font-size: 4rem;
-      border: solid orange;
     }
     @media(min-width: 768px){
       font-size: 3.5rem;
     }
     @media(min-width: 1024px){
+    }
+    @media(min-width: 1400px){
       font-size: 5rem;
     }
   }
@@ -202,14 +202,14 @@
 #github,
 #python {
   opacity: 0.1;
-  animation: groupone infinite 5s ease-in-out;
+  animation: groupone infinite 3s ease-in-out;
 }
 .group__zero,
 .group__one,
 .group__two {
   opacity: 0.1;
 
-  animation: small infinite ease-in-out 6s;
+  animation: small infinite ease-in-out 4s;
 }
 .group__three,
 .group__four {
@@ -227,5 +227,5 @@
 
 .group__five,
 .group__six {
-  animation: small infinite ease-in-out 6s;
+  animation: small infinite ease-in-out 3s;
 }

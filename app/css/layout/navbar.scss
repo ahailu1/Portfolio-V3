@@ -1,21 +1,24 @@
 .navbar {
-  display: flex;
-  background-color: $primary-color;
-  justify-content: space-between;
-  position: fixed;
-  align-items: center;
-  border-bottom: solid $fifth-color 2px;
-  z-index: 500;
-  width: 100%;
-  transition: all ease-in-out 0.5s;
-  height: 5rem;
-  box-shadow: 0 0 15px 0 $fifth-color;
-  opacity: 0.9;
+  @media(min-width: 320px){
+    display: flex;
+    background-color: $primary-color;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    border-bottom: solid $fifth-color 2px;
+    z-index: 500;
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    height: 5rem;
+    box-shadow: 0 0 15px 0 $fifth-color;
+    opacity: 0.9;  
+  }
+  @media(min-width: 768px){
+  }
   &__layer {
     display: none;
   }
   &.toggled {
-    overflow-x: hidden;
     height: 0px;
     transition: all ease-in-out 0.5s;
     opacity: 0;
@@ -23,7 +26,6 @@
   &.toggle2 {
     background-color: $primary-color;
     border: none;
-    overflow-x: hidden;
     height: 4.5rem;
     box-shadow: none;
     transition: all ease-in-out 0.75s;

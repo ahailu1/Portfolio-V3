@@ -121,25 +121,26 @@ body::-webkit-scrollbar-thumb {
     opacity: 0.85;
   }
 }
-.navbar {
-  display: flex;
-  background-color: #030014;
-  justify-content: space-between;
-  position: fixed;
-  align-items: center;
-  border-bottom: solid #10101f 2px;
-  z-index: 500;
-  width: 100%;
-  transition: all ease-in-out 0.5s;
-  height: 5rem;
-  box-shadow: 0 0 15px 0 #10101f;
-  opacity: 0.9;
+@media (min-width: 320px) {
+  .navbar {
+    display: flex;
+    background-color: #030014;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    border-bottom: solid #10101f 2px;
+    z-index: 500;
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    height: 5rem;
+    box-shadow: 0 0 15px 0 #10101f;
+    opacity: 0.9;
+  }
 }
 .navbar__layer {
   display: none;
 }
 .navbar.toggled {
-  overflow-x: hidden;
   height: 0px;
   transition: all ease-in-out 0.5s;
   opacity: 0;
@@ -147,7 +148,6 @@ body::-webkit-scrollbar-thumb {
 .navbar.toggle2 {
   background-color: #030014;
   border: none;
-  overflow-x: hidden;
   height: 4.5rem;
   box-shadow: none;
   transition: all ease-in-out 0.75s;
@@ -223,6 +223,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 0 0 100px;
     height: 105vh;
     margin: auto;
+    width: auto;
     padding: 5rem 0 5rem 0;
     align-items: center;
     padding: 0;
@@ -408,7 +409,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .about__section.skills {
-    width: 90%;
+    width: 100%;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
@@ -436,7 +437,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .about__section__skills {
-    width: 90%;
+    width: auto;
     align-items: flex-start;
     justify-content: space-between;
     margin: 0 0 0 100px;
@@ -444,6 +445,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1400px) {
   .about__section__skills {
+    width: auto;
     margin: 0 0 0 200px;
     justify-content: space-between;
   }
@@ -463,15 +465,21 @@ body::-webkit-scrollbar-thumb {
     font-size: 3rem;
   }
 }
-
-.about__icon {
-  background-color: #030014;
-  padding: 0 0.75rem 0 0.75rem;
-  margin: 0 0 0 -5rem;
-  font-size: 3rem;
+@media (min-width: 320px) {
+  .about__icon {
+    background-color: #030014;
+    padding: 0 0.75rem 0 0.75rem;
+    margin: 0 0 0 -5rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .about__icon {
+    font-size: 2rem;
+  }
 }
 .about__icon.tools {
-  margin: 0 0 0 -5rem;
+  margin: 0 0 0 -3rem;
 }
 
 @media (min-width: 320px) {
@@ -592,7 +600,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 968px) {
   .about__heading__span {
-    font-size: 4rem;
+    font-size: 3.25rem;
   }
 }
 
@@ -615,7 +623,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .about {
-    width: 90%;
+    width: auto;
     align-items: flex-start;
     margin: 0 0 0 100px;
     flex-direction: row;
@@ -677,8 +685,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 320px) {
   .about__image {
-    height: 22rem;
-    width: auto;
+    width: 22rem;
   }
 }
 @media (min-width: 320px) {
@@ -713,7 +720,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 768px) {
   .form__wrapper {
-    width: 90%;
+    width: auto;
     margin: 0 0 0 100px;
   }
 }
@@ -860,6 +867,11 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0 0 12px 0px #ff5454;
     margin: 2rem 0 2rem 0;
     border-radius: 0.45rem;
+  }
+}
+@media (min-width: 768px) {
+  .projects__section {
+    width: auto;
   }
 }
 .projects__paragraph {
@@ -1047,11 +1059,6 @@ body::-webkit-scrollbar-thumb {
     font-weight: 800;
   }
 }
-@media (min-width: 768px) {
-  .heading__zero {
-    border: solid orange;
-  }
-}
 @media (min-width: 320px) {
   .heading__design {
     display: flex;
@@ -1084,7 +1091,6 @@ body::-webkit-scrollbar-thumb {
   .heading__four {
     font-weight: 800;
     font-size: 4rem;
-    border: solid orange;
   }
 }
 @media (min-width: 768px) {
@@ -1092,7 +1098,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 3.5rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .heading__four {
     font-size: 5rem;
   }
@@ -1237,14 +1243,14 @@ body::-webkit-scrollbar-thumb {
 #github,
 #python {
   opacity: 0.1;
-  animation: groupone infinite 5s ease-in-out;
+  animation: groupone infinite 3s ease-in-out;
 }
 
 .group__zero,
 .group__one,
 .group__two {
   opacity: 0.1;
-  animation: small infinite ease-in-out 6s;
+  animation: small infinite ease-in-out 4s;
 }
 
 .group__three,
@@ -1263,7 +1269,7 @@ body::-webkit-scrollbar-thumb {
 
 .group__five,
 .group__six {
-  animation: small infinite ease-in-out 6s;
+  animation: small infinite ease-in-out 3s;
 }
 
 @media (min-width: 320px) {
@@ -1278,13 +1284,12 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 568px) {
   .all__projects {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 @media (min-width: 768px) {
   .all__projects {
-    width: 90%;
-    align-items: flex-start;
+    width: auto;
     margin: 0 0 0 100px;
   }
 }

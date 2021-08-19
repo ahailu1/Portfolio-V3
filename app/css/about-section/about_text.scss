@@ -13,7 +13,7 @@
     align-items: center;
   }
   @media(min-width: 768px){
-    width: 90%;
+    width: auto;
     align-items: flex-start;
     margin: 0 0 0 100px;
     flex-direction: row;
@@ -45,7 +45,7 @@
       font-size: 4rem;
       font-weight: 800;
     }
-    @media (min-width: 568px) {
+    @media (min-width: 768px) {
     }
     @media(min-width: 1024px){
       margin: 0;
@@ -66,8 +66,7 @@
   }
   &__image {
     @media(min-width:320px){
-      height: 22rem;
-      width: auto;
+      width: 22rem;
     }
     @media(min-width: 1400px){
     }

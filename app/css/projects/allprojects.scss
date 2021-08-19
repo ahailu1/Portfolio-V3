@@ -8,11 +8,10 @@
     position: relative;
   }
   @media (min-width: 568px) {
-    align-items: flex-start;
+    align-items: center;
   }
   @media(min-width: 768px){
-    width: 90%;
-    align-items: flex-start;
+    width: auto;
     margin: 0 0 0 100px;
   }
   @media(min-width: 1400px){
