@@ -15,7 +15,6 @@
   @media(min-width: 768px){
     width: 90%;
     align-items: flex-start;
-    justify-content: space-between;
     margin: 0 0 0 100px;
     flex-direction: row;
   }
@@ -25,7 +24,6 @@
   &__section {
     @media (min-width: 320px) {
       width: 100%;
-      padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -36,7 +34,6 @@
     @media(min-width:768px){
       justify-content: center;
       align-items: flex-start;
-      width: 50%;
     }
   }
   &__header {
@@ -63,6 +60,7 @@
     }
     @media(min-width: 968px){
       font-size: 0.9rem;
+      width: 70%;
       padding: 2rem 0 0 0;
     }
   }
@@ -70,7 +68,8 @@
     @media(min-width:320px){
       height: 22rem;
       width: auto;
-        
+    }
+    @media(min-width: 1400px){
     }
   }
 }
@@ -91,10 +90,8 @@
       height: 100%;
     }
     @media(min-width: 968px){
-      margin: auto;
     }
     @media(min-width: 1400px){
-      margin: 0;
     }
   }
 }
