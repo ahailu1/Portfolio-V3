@@ -4,8 +4,7 @@
   width: 80%;
   flex-direction: column;
   &__section {
-
-    @media(min-width: 320px){
+    @media (min-width: 320px) {
       padding: 8rem 3rem 8rem 3rem;
       display: flex;
       //background-color: $fifth-color;
@@ -15,9 +14,9 @@
       //border: solid $secondary-color 2px;
       box-shadow: 0 0 12px 0px $fourth-color;
       margin: 2rem 0 2rem 0;
-      border-radius: 0.45rem;  
+      border-radius: 0.45rem;
     }
-    @media(min-width:768px){
+    @media (min-width: 768px) {
       width: auto;
     }
   }

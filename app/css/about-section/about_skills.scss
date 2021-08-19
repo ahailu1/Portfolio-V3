@@ -11,14 +11,14 @@
       }
       @media (min-width: 600px) {
       }
-      @media(min-width:768px){
+      @media (min-width: 768px) {
         width: 100%;
         justify-content: space-between;
         flex-direction: row;
-                flex-wrap: wrap;
+        flex-wrap: wrap;
         align-items: flex-start;
       }
-      @media(min-width: 1400px){
+      @media (min-width: 1400px) {
         justify-content: space-between;
       }
     }
@@ -39,10 +39,10 @@
         justify-content: space-between;
         margin: 0 0 0 100px;
       }
-      @media(min-width: 1400px){
+      @media (min-width: 1400px) {
         width: auto;
         margin: 0 0 0 200px;
-          padding: 0rem 3rem 10rem 4rem;
+        padding: 0rem 3rem 10rem 4rem;
         justify-content: space-between;
       }
       &__title {
@@ -53,34 +53,29 @@
           border-bottom: solid $fourth-color 5px;
           font-size: 4rem;
           font-weight: 800;
-            }
-            @media(min-width: 568px){
-            }
-        @media (min-width: 768px) {
-          
         }
-        @media(min-width: 968px){
+        @media (min-width: 568px) {
+        }
+        @media (min-width: 768px) {
+        }
+        @media (min-width: 968px) {
           font-size: 3rem;
         }
-        @media(min-width: 1400px){
-
-
+        @media (min-width: 1400px) {
         }
-
       }
     }
   }
 }
 .about {
   &__icon {
-    @media(min-width: 320px){
+    @media (min-width: 320px) {
       background-color: $primary-color;
       padding: 0 0.75rem 0 0.75rem;
       margin: 0 0 0 -5rem;
       font-size: 2rem;
-  
     }
-    @media(min-width: 1400px){
+    @media (min-width: 1400px) {
       font-size: 2rem;
     }
     &.tools {
@@ -102,50 +97,46 @@
   @media (min-width: 600px) {
     width: 60vh;
   }
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     width: 40vh;
   }
-  @media(min-width: 932px){
-width: 40vh;
-  }
-  @media(min-width: 1090px){
+  @media (min-width: 932px) {
     width: 40vh;
   }
-
+  @media (min-width: 1090px) {
+    width: 40vh;
+  }
 
   &__title {
-    @media(min-width:320px){
+    @media (min-width: 320px) {
       margin: 0 1rem 0 1rem;
       position: absolute;
       top: -5%;
       z-index: 20;
       right: 35%;
     }
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
     }
-
   }
 
   &__heading {
-
-@media(min-width: 320px){
-  font-weight: 700;
-  background-color: $primary-color;
-  font-size: 1.15rem;
-  padding: 1rem 0 1rem 0;
-  position: absolute;
-}
-@media(min-width: 600px){
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
-}
-@media(min-width: 968px){
-  font-size: 1.25rem;
-}
-@media(min-width: 1062px){
-  font-size: 1rem;
-
-}
+    @media (min-width: 320px) {
+      font-weight: 700;
+      background-color: $primary-color;
+      font-size: 1.15rem;
+      padding: 1rem 0 1rem 0;
+      position: absolute;
+    }
+    @media (min-width: 600px) {
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+    }
+    @media (min-width: 968px) {
+      font-size: 1.25rem;
+    }
+    @media (min-width: 1062px) {
+      font-size: 1rem;
+    }
 
     &.frontend,
     &.tools {
@@ -162,14 +153,14 @@ width: 40vh;
     letter-spacing: 1px;
     list-style: none;
     & > li {
-      @media(min-width: 320px){
+      @media (min-width: 320px) {
         margin: 0.25rem 0 0.25rem;
         font-size: 1.25rem;
-        color: $third-color;  
+        color: $third-color;
       }
-      @media(min-width: 700px){
+      @media (min-width: 700px) {
       }
-      @media(min-width: 932px){
+      @media (min-width: 932px) {
         font-size: 0.75rem;
       }
     }
@@ -204,7 +195,7 @@ width: 40vh;
     color: $secondary-color;
     font-size: 3rem;
   }
-  @media(min-width:968px){
+  @media (min-width: 968px) {
     font-size: 3.25rem;
   }
 }

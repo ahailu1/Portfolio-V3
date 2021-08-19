@@ -226,11 +226,16 @@ body::-webkit-scrollbar-thumb {
     padding: 5rem 0 5rem 0;
     align-items: center;
     padding: 0;
+    flex-direction: row;
+  }
+}
+@media (min-width: 800px) {
+  .home {
+    flex-direction: row;
   }
 }
 @media (min-width: 1024px) {
   .home {
-    flex-direction: row;
     justify-content: space-around;
   }
 }
@@ -318,6 +323,11 @@ body::-webkit-scrollbar-thumb {
     color: #ff3a3a;
     font-size: 4rem;
     font-weight: 800;
+  }
+}
+@media (min-width: 768px) {
+  .home__text__span {
+    font-size: 3rem;
   }
 }
 @media (min-width: 1024px) {

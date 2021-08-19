@@ -1,5 +1,5 @@
 .navbar {
-  @media(min-width: 320px){
+  @media (min-width: 320px) {
     display: flex;
     background-color: $primary-color;
     justify-content: space-between;
@@ -11,9 +11,9 @@
     transition: all ease-in-out 0.5s;
     height: 5rem;
     box-shadow: 0 0 15px 0 $fifth-color;
-    opacity: 0.9;  
+    opacity: 0.9;
   }
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
   }
   &__layer {
     display: none;

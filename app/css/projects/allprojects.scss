@@ -10,12 +10,12 @@
   @media (min-width: 568px) {
     align-items: center;
   }
-  @media(min-width: 768px){
+  @media (min-width: 768px) {
     align-items: flex-start;
     width: auto;
     margin: 0 0 0 100px;
   }
-  @media(min-width: 1400px){
+  @media (min-width: 1400px) {
     margin: 0 0 0 200px;
     justify-content: space-around;
   }
@@ -27,15 +27,14 @@
       border-bottom: solid $fourth-color 5px;
       font-size: 4rem;
       font-weight: 800;
-}
+    }
     @media (min-width: 568px) {
       font-size: 4rem;
     }
-    @media(min-width: 768px){
-      
+    @media (min-width: 768px) {
     }
 
-    @media(min-width: 968px){
+    @media (min-width: 968px) {
     }
   }
 }
