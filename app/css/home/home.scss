@@ -1,0 +1,124 @@
+.home {
+  @media (min-width: 320px) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 5rem 0 5rem 0;
+    z-index: 500;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  @media (min-width: 700px) {
+    margin: 0 0 0 100px;
+    height: 105vh;
+
+    padding: 0;
+    flex-direction: row;
+  }
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
+  @media (min-width: 1024px) {
+    width: 90%;
+    justify-content: space-around;
+    padding: 2rem 2rem 2rem 3rem;
+    overflow-x: hidden;
+  }
+  &__left {
+    @media (min-width: 320px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 3rem 0 3rem 0;
+      justify-content: center;
+      flex-direction: column;
+    }
+    @media (min-width: 700px) {
+      padding: 2rem 0 0 3rem;
+    }
+    @media(min-width: 968px){
+      width: 40%;
+      align-items: flex-start;
+    }
+  }
+  &__right {
+    @media (min-width: 320px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5rem 2rem 5rem 2rem;
+    }
+    @media (min-width: 600px) {
+      margin: 0 0 0 2rem;
+    }
+    @media(min-width: 700px){
+      width: 45%;
+    }
+    @media(min-width: 1024px){
+      margin: 0 5rem 0 0;
+    }
+  }
+}
+
+.home {
+  &__text {
+    font-size: 1.75rem !important;
+    color: $third-color;
+    font-weight: 800;
+    white-space: nowrap;
+    margin: 0.5rem 0 0 0;
+    &.two {
+      @media (min-width: 320px) {
+        display: flex;
+        flex-direction: column;
+      }
+      @media(min-width: 568px){
+      }
+      @media(min-width: 700px){
+        margin: 0;
+      }
+      
+    }
+    &__welcome {
+      @media (min-width: 320px) {
+        font-size: 2rem;
+      }
+      @media(min-width: 700px){
+        font-size: 2.5rem;
+      }
+    }
+    &__span {
+      @media(min-width: 320px){
+        color: $secondary-color;
+        font-size: 4rem;
+        font-weight: 800;          
+      }
+      @media(min-width: 700px){
+      }
+      &__portfolio {
+        @media(min-width:320px){
+          margin: 1.5rem 0 0 0;
+          font-size: 4rem;
+          border-radius: 0.35rem;
+          box-shadow: 0 0 6px 0 $secondary-color;
+          border: solid $secondary-color;
+          padding: 1rem;
+          color: lighten($third-color, 5%);
+          font-weight: 800;
+        }
+        @media(min-width:700px){
+        }
+      }
+    }
+  }
+}
+.superscript {
+  font-size: 2rem;
+  color: $secondary-color;
+  margin: -2rem 1rem 1rem -1rem;
+  text-shadow: 1px 1px 2px $fourth-color;
+}
+.word__cloud {
+}

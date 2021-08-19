@@ -1,0 +1,100 @@
+.about {
+  @media (min-width: 320px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    align-items: center;
+    padding: 0 3rem 0 4rem;
+    flex-direction: column-reverse;
+    transition: 0.5s 0.75s all ease-in-out;
+  }
+  @media (min-width: 568px) {
+    align-items: center;
+  }
+  @media(min-width: 768px){
+    width: 90%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 0 100px;
+    flex-direction: row;
+  }
+  @media(min-width: 1400px){
+    margin: 0 0 0 200px;
+  }
+  &__section {
+    @media (min-width: 320px) {
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (min-width: 568px) {
+      align-items: center;
+    }
+    @media(min-width:768px){
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
+    }
+  }
+  &__header {
+    @media (min-width: 320px) {
+      line-height: 4rem;
+      padding: 0rem 0 1rem 0;
+      margin: 4rem 0 4rem 0;
+      border-bottom: solid $fourth-color 5px;
+      font-size: 4rem;
+      font-weight: 800;
+    }
+    @media (min-width: 568px) {
+    }
+    @media(min-width: 1024px){
+      margin: 0;
+    }
+  }
+  &__paragraph {
+    @media (min-width: 320px) {
+      font-weight: 400;
+      letter-spacing: 1.25px;
+      line-height: 2rem;
+      font-size: 1.25rem;
+    }
+    @media(min-width: 968px){
+      font-size: 0.9rem;
+      padding: 2rem 0 0 0;
+    }
+  }
+  &__image {
+    @media(min-width:320px){
+      height: 22rem;
+      width: auto;
+        
+    }
+  }
+}
+.about {
+  &__section__image {
+    @media (min-width: 320px) {
+      display: flex;
+      padding: 2rem 0 2rem 0;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.65;
+    }
+    @media (min-width: 600px) {
+    }
+    @media(min-width: 768px){
+      margin: auto;
+      width: 50%;
+      height: 100%;
+    }
+    @media(min-width: 968px){
+      margin: auto;
+    }
+    @media(min-width: 1400px){
+      margin: 0;
+    }
+  }
+}

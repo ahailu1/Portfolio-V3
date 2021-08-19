@@ -1,28 +1,30 @@
 .navbar {
   display: flex;
   background-color: $primary-color;
-  width: 100%;
   justify-content: space-between;
   position: fixed;
   align-items: center;
   border-bottom: solid $fifth-color 2px;
   z-index: 500;
+  width: 100%;
   transition: all ease-in-out 0.5s;
   height: 5rem;
   box-shadow: 0 0 15px 0 $fifth-color;
   opacity: 0.9;
-  &__layer{
+  &__layer {
     display: none;
   }
-  &.toggled{
+  &.toggled {
+    overflow-x: hidden;
     height: 0px;
-    transition: all ease-in-out 0.75s;
+    transition: all ease-in-out 0.5s;
     opacity: 0;
   }
-  &.toggle2{
+  &.toggle2 {
     background-color: $primary-color;
     border: none;
-        height: 4.5rem;
+    overflow-x: hidden;
+    height: 4.5rem;
     box-shadow: none;
     transition: all ease-in-out 0.75s;
   }
@@ -57,31 +59,29 @@
     text-decoration: none;
     z-index: 100;
     position: relative;
-  &::after{
-    position: absolute;
-    top: -100%;
-    border: none;
-    opacity: 0;
-    left: 0;
-    width: 0px;
-    height: 3px;
-    content: '';
-    display: flex;
-    opacity: 0;
-    justify-content: center;
-    align-self: flex-end;
-    width: 0%;
+    &::after {
+      position: absolute;
+      top: -100%;
+      border: none;
+      opacity: 0;
+      left: 0;
+      width: 0px;
+      height: 3px;
+      content: "";
+      display: flex;
+      opacity: 0;
+      justify-content: center;
+      align-self: flex-end;
+      width: 0%;
+    }
+    &:hover::after {
+      width: 100%;
+      left: 2%;
+      top: 100%;
+      transition: all ease-in-out 0.5s;
+      background-color: $third-color;
+      z-index: -40;
+      opacity: 1;
+    }
   }
-  &:hover::after{
-width: 100%;
-left: 2%;
-top: 100%;
-    transition: all ease-in-out 0.5s;
-    background-color: $third-color;
-    z-index: -40;
-    opacity: 1;
-  }
-
-  }
-
 }

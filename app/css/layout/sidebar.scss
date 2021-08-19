@@ -1,8 +1,10 @@
 .sidebar {
-  @media(min-width: 320px){
+  @media (min-width: 320px) {
     display: none;
   }
-  @media(min-width: 560px){
+  @media (min-width: 560px) {
+  }
+  @media(min-width: 768px){
     position: fixed;
     width: 100px;
     height: 100%;
@@ -14,7 +16,7 @@
     align-items: center;
     justify-content: flex-end;
     z-index: 20;
-  
+
   }
   //border-right: solid $third-color;
   &__icon {

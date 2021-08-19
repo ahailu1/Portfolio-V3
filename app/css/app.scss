@@ -1,14 +1,13 @@
 @import "./config/variables.scss";
 @import "./config/settings.scss";
-@import "./wordcloud_animations.scss";
+@import "./home/wordcloud_animations.scss";
 @import "./layout/navbar.scss";
-@import "./home.scss";
-@import "./sidebar.scss";
-@import "./about_skills.scss";
-@import "./about_text.scss";
-@import "./form__page.scss";
-@import "./projects.scss";
+@import "./home/home.scss";
+@import "./layout/sidebar.scss";
+@import "./about-section/about_skills.scss";
+@import "./about-section/about_text.scss";
+@import "./contact/form__page.scss";
+@import "./projects/projects.scss";
 @import "./layout/footer.scss";
-@import "./wordcloud.scss";
-@import "./allprojects.scss";
-
+@import "./home/wordcloud.scss";
+@import "./projects/allprojects.scss";

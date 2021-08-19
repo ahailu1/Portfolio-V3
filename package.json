@@ -9,6 +9,7 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
+    "initProject": "npm run build:dev && npm run initsass && npm run watch",
     "serve": "webpack serve",
     "initsass": "sass --watch ./app/css/app.scss ./app/src/index.css"
   },

@@ -4,22 +4,22 @@
   width: 80%;
   flex-direction: column;
   &__section {
-    padding: 8rem 3rem 8rem 3rem;
-    display: flex;
-    //background-color: $fifth-color;
-    background-color: $fifth-color;
-    justify-content: space-between;
-    width: 100%;
-    //border: solid $secondary-color 2px;
-    box-shadow: 0 0 12px 0px $fourth-color;
-    margin: 2rem 0 2rem 0;
-    border-radius: 0.45rem;
-  }
-  &__title {
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: white;
-    font-size: 4rem;
+
+    @media(min-width: 320px){
+      padding: 8rem 3rem 8rem 3rem;
+      display: flex;
+      //background-color: $fifth-color;
+      background-color: $fifth-color;
+      justify-content: space-between;
+      width: 100%;
+      //border: solid $secondary-color 2px;
+      box-shadow: 0 0 12px 0px $fourth-color;
+      margin: 2rem 0 2rem 0;
+      border-radius: 0.45rem;  
+    }
+    @media(min-width:700px){
+
+    }
   }
   &__paragraph {
     margin: 0.5rem 2rem 0.5rem 0;
@@ -30,7 +30,7 @@
     width: 90%;
     background-color: $primary-color;
     border: solid $primary-color;
-    
+
     font-weight: 300;
     letter-spacing: 1.5px;
     line-height: 1.25rem;
