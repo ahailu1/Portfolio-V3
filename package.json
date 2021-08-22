@@ -41,5 +41,8 @@
     "webpack": "^5.45.1",
     "webpack-dev-server": "^1.16.5",
     "workbox-webpack-plugin": "^6.1.5"
+  },
+  "dependencies": {
+    "gsap": "^3.7.1"
   }
 }

@@ -59,5 +59,4 @@ let initNavbar = () => {
     }
   });
 };
-
-export default initNavbar;
+initNavbar();
