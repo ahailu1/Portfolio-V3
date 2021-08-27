@@ -1,12 +1,10 @@
-.section__canvas{
-    height: 100vh;
-    border: solid orange;
-    margin: 0 0 0 100px;
 
-}
 #canvas {
     height: 100vh;
-    background-color: $primary-color;
-    width: 100vh;
-    border: solid red;
+    width: 100%;
+    padding: 5rem 0 3rem;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    opacity: 0.9;
 }

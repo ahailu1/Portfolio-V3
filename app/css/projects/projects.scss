@@ -1,13 +1,19 @@
 .projects {
-  height: auto;
-  display: flex;
-  width: 80%;
-  flex-direction: column;
+  @media(min-width:320px){
+    height: auto;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  @media(min-width:768px){
+    width: 80%;
+
+  }
   &__section {
     @media (min-width: 320px) {
       //padding: 8rem 3rem 8rem 3rem;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
       //background-color: $fifth-color;
       //background-color: $fifth-color;
       justify-content: space-between;
@@ -18,7 +24,11 @@
       //border-radius: 0.45rem;
     }
     @media (min-width: 768px) {
+      flex-direction: row-reverse;
       width: auto;
+    }
+    @media(min-width:1024px){
+
     }
   &.one{
     @media(min-width: 320px){
@@ -32,7 +42,6 @@
     border-radius: 0.35rem;
     padding: 1.25rem;
     width: 100%;
-
     background-color: lighten($fifth-color, 3%);
     //border: solid $primary-color;
 
@@ -73,21 +82,33 @@
     }
   }
   &__description {
-    width: 40%;
-    z-index: 500;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
+    @media(min-width: 320px){
+      width: 100%;
+      z-index: 500;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+    }
+    @media(min-width: 768px){
+      width: 40%;
+
+    }
   }
 }
 
 .projects__section {
   &__image {
-  
-position: relative;
-margin: 0 -3rem 0 0;
-border-radius: 0.5rem;
+  @media(min-width: 320px){
+    position: relative;
+    border-radius: 0.5rem;
+    margin: 0 0 0 0;
+    
+  }
+  @media(min-width: 320px){
+    margin: 0 -3rem 0 0;
+    
+  }
 
     &::after{
       border-radius: 0.5rem;

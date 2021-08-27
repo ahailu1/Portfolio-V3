@@ -12,7 +12,7 @@
       @media (min-width: 600px) {
       }
       @media (min-width: 768px) {
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
@@ -41,6 +41,7 @@
       }
       @media (min-width: 1400px) {
         width: auto;
+        height: auto;
         margin: 0 0 0 200px;
         padding: 0rem 3rem 10rem 4rem;
         justify-content: space-between;
@@ -86,13 +87,13 @@
 
 .about__skills {
   @media (min-width: 320px) {
-    width: 40vh;
+    width: 50vh;
     background-color: $primary-color;
     height: 60vh;
     border: solid $fourth-color 3px;
     border-bottom: none;
     position: relative;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 1rem 3rem 1rem;
   }
   @media (min-width: 600px) {
     width: 60vh;
