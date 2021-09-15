@@ -10,6 +10,9 @@ const dots = []; // Store every particle in this array
 // Store the 2D context
 const ctx = canvas.getContext('2d');
 
+
+
+
 // Function called right after user resized its screen
 function onResize () {
   // We need to define the dimensions of the canvas to our canvas element
@@ -29,16 +32,20 @@ function onResize () {
   }
 }
 
+
+
 // Listen to resize events
 window.addEventListener('resize', onResize);
 // Make sure the canvas size is perfect
 onResize();
 class Dot {
     constructor() {
-      this.x = (Math.random() - 0.5) * width; // Give a random x position
+      
+      
+        this.x = (Math.random() - 0.5) * width; // Give a random x position
       this.y = (Math.random() - 0.5) * height; // Give a random y position
       this.z = Math.random() * width; // Give a random z position
-      this.radius = 10; // Size of our element in the 3D world
+      this.radius = 3; // Size of our element in the 3D world
       
       this.xProjected = 0; // x coordinate on the 2D world
       this.yProjected = 0; // y coordinate on the 2D world
@@ -76,7 +83,7 @@ class Dot {
   }
   
   // Create 800 new dots
-  for (let i = 0; i < 800; i++) {
+  for (let i = 0; i < 1000; i++) {
     // Create a new dot and push it into the array
     dots.push(new Dot());
   }
@@ -94,3 +101,4 @@ class Dot {
   }
 
   render();
+  

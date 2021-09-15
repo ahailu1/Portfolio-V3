@@ -1,33 +1,47 @@
 .navbar {
+ /*
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    filter: blur(5px) brightness(1);
+    content: '';
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+*/
   @media (min-width: 320px) {
     display: flex;
-    background-color: $primary-color;
     justify-content: space-between;
     position: fixed;
     align-items: center;
     border-bottom: solid $fifth-color 2px;
-    z-index: 500;
     width: 100%;
     transition: all ease-in-out 0.5s;
-    height: 5rem;
+    height: 4.5rem;
+    z-index: 100;
     box-shadow: 0 0 15px 0 $fifth-color;
-    opacity: 0.9;
-  }
+    backdrop-filter: blur(12px);
+    }
   @media (min-width: 768px) {
   }
   &__layer {
+    position: relative;
     display: none;
   }
   &.toggled {
+
     height: 0px;
     transition: all ease-in-out 0.5s;
     opacity: 0;
   }
   &.toggle2 {
-    background-color: $primary-color;
-    border: none;
-    height: 4.5rem;
+    height: 5rem;
     box-shadow: none;
+    box-shadow: 0 0 7px 0 $third-color;
     transition: all ease-in-out 0.75s;
   }
   &__logo {
@@ -48,18 +62,17 @@
   &__list {
     display: flex;
     list-style: none;
+
   }
   &__anchortag {
     color: $fourth-color;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 1.5px;
-    font-size: 1.1rem;
+    z-index: 500;
+    font-size: 1.25rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    //border-radius: 0.2rem;
-    //box-shadow: 0 0 4px 0 $third-color;
     margin: 0 0.5rem 0 0.5rem;
     text-decoration: none;
-    z-index: 100;
     position: relative;
     &::after {
       position: absolute;
@@ -82,8 +95,8 @@
       top: 100%;
       transition: all ease-in-out 0.5s;
       background-color: $third-color;
-      z-index: -40;
       opacity: 1;
+  
     }
   }
 }

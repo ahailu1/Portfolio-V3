@@ -5,7 +5,6 @@
     width: 100%;
     flex-direction: column;
     padding: 5rem 0 5rem 0;
-    z-index: 500;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -41,9 +40,12 @@
       padding: 2rem 0 0 3rem;
     }
     @media (min-width: 968px) {
-      z-index: 500;
-      width: 40%;
       align-items: flex-start;
+      justify-content: flex-end;
+    }
+    @media(min-width: 1440px){
+      padding: 10rem 0 0 0;
+
     }
   }
   &__right {
@@ -60,12 +62,13 @@
     @media (min-width: 768px) {
     }
     @media (min-width: 1024px) {
+      border: solid yellow;
     }
   }
 }
 
-.home {
-  &__text {
+.home{
+  &__text{
     @media (min-width: 320px) {
       font-size: 1.75rem !important;
       color: $third-color;
@@ -75,9 +78,31 @@
       font-size: 1.5rem;
     }
     @media (min-width: 1024px) {
+      font-size: 1rem;
       white-space: nowrap;
     }
     @media(min-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__intro{
+      @media(min-width: 320px){
+
+      }
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 1.25rem;
+        white-space: nowrap;
+      }
+      @media(min-width: 1440px) {
+        display: flex;
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &.two {
@@ -92,6 +117,13 @@
       }
     }
     &__welcome {
+
+      &__wrapper{
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
       @media (min-width: 320px) {
         font-size: 2rem;
       }
@@ -105,6 +137,7 @@
     }
     &__span {
       @media (min-width: 320px) {
+        position: relative;
         color: $secondary-color;
         font-size: 4rem;
         font-weight: 800;
@@ -116,7 +149,14 @@
         font-size: 3rem;
       }
       @media (min-width: 1400px) {
-        font-size: 3.75rem;
+        transition: all ease-in-out 1s;
+        font-size: 4rem;
+      }
+      &::before{
+        position: absolute;
+        content: 'Alexander Hailu';
+        text-shadow: 0px 0px 7px $third-color;
+        filter: blur(5px) brightness(1);
       }
       &__portfolio {
         @media (min-width: 320px) {
@@ -126,6 +166,7 @@
           box-shadow: 0 0 6px 0 $secondary-color;
           border: solid $secondary-color;
           padding: 1rem;
+          //transform: perspective(8000px) rotateY(45deg);
           color: lighten($third-color, 5%);
           font-weight: 800;
         }
@@ -135,10 +176,4 @@
       }
     }
   }
-}
-.superscript {
-  font-size: 2rem;
-  color: $secondary-color;
-  margin: -2rem 1rem 1rem -1rem;
-  text-shadow: 1px 1px 2px $fourth-color;
 }

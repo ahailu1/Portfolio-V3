@@ -35,7 +35,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
     position: relative;
-    overflow-y: auto;
   }
 }
 
@@ -121,23 +120,39 @@ body::-webkit-scrollbar-thumb {
     opacity: 0.85;
   }
 }
+.navbar {
+  /*
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      display: flex;
+      filter: blur(5px) brightness(1);
+      content: '';
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+    }
+  */
+}
 @media (min-width: 320px) {
   .navbar {
     display: flex;
-    background-color: #030014;
     justify-content: space-between;
     position: fixed;
     align-items: center;
     border-bottom: solid #10101f 2px;
-    z-index: 500;
     width: 100%;
     transition: all ease-in-out 0.5s;
-    height: 5rem;
+    height: 4.5rem;
+    z-index: 100;
     box-shadow: 0 0 15px 0 #10101f;
-    opacity: 0.9;
+    backdrop-filter: blur(12px);
   }
 }
 .navbar__layer {
+  position: relative;
   display: none;
 }
 .navbar.toggled {
@@ -146,10 +161,9 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
 }
 .navbar.toggle2 {
-  background-color: #030014;
-  border: none;
-  height: 4.5rem;
+  height: 5rem;
   box-shadow: none;
+  box-shadow: 0 0 7px 0 #e7e7e7;
   transition: all ease-in-out 0.75s;
 }
 .navbar__logo {
@@ -172,13 +186,13 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar__anchortag {
   color: #ff5454;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1.5px;
-  font-size: 1.1rem;
+  z-index: 500;
+  font-size: 1.25rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   margin: 0 0.5rem 0 0.5rem;
   text-decoration: none;
-  z-index: 100;
   position: relative;
 }
 .navbar__anchortag::after {
@@ -202,7 +216,6 @@ body::-webkit-scrollbar-thumb {
   top: 100%;
   transition: all ease-in-out 0.5s;
   background-color: #e7e7e7;
-  z-index: -40;
   opacity: 1;
 }
 
@@ -212,7 +225,6 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     flex-direction: column;
     padding: 5rem 0 5rem 0;
-    z-index: 500;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -261,9 +273,13 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 968px) {
   .home__left {
-    z-index: 500;
-    width: 40%;
     align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1440px) {
+  .home__left {
+    padding: 10rem 0 0 0;
   }
 }
 @media (min-width: 320px) {
@@ -280,6 +296,12 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
   }
 }
+@media (min-width: 1024px) {
+  .home__right {
+    border: solid yellow;
+  }
+}
+
 @media (min-width: 320px) {
   .home__text {
     font-size: 1.75rem !important;
@@ -294,7 +316,34 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1024px) {
   .home__text {
+    font-size: 1rem;
     white-space: nowrap;
+  }
+}
+@media (min-width: 1440px) {
+  .home__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .home__text__intro {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .home__text__intro {
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 1440px) {
+  .home__text__intro {
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (min-width: 320px) {
@@ -307,6 +356,12 @@ body::-webkit-scrollbar-thumb {
   .home__text.two {
     margin: 0;
   }
+}
+.home__text__welcome__wrapper {
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 @media (min-width: 320px) {
   .home__text__welcome {
@@ -325,6 +380,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 320px) {
   .home__text__span {
+    position: relative;
     color: #ff3a3a;
     font-size: 4rem;
     font-weight: 800;
@@ -342,8 +398,15 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1400px) {
   .home__text__span {
-    font-size: 3.75rem;
+    transition: all ease-in-out 1s;
+    font-size: 4rem;
   }
+}
+.home__text__span::before {
+  position: absolute;
+  content: "Alexander Hailu";
+  text-shadow: 0px 0px 7px #e7e7e7;
+  filter: blur(5px) brightness(1);
 }
 @media (min-width: 320px) {
   .home__text__span__portfolio {
@@ -361,13 +424,6 @@ body::-webkit-scrollbar-thumb {
   .home__text__span__portfolio {
     font-size: 3rem;
   }
-}
-
-.superscript {
-  font-size: 2rem;
-  color: #ff3a3a;
-  margin: -2rem 1rem 1rem -1rem;
-  text-shadow: 1px 1px 2px #ff5454;
 }
 
 @media (min-width: 320px) {
@@ -876,11 +932,12 @@ body::-webkit-scrollbar-thumb {
 #canvas {
   height: 100vh;
   width: 100%;
+  background-color: transparent;
   padding: 5rem 0 3rem;
   position: absolute;
   left: 0;
-  z-index: 10;
-  opacity: 0.9;
+  z-index: -10;
+  opacity: 1;
 }
 
 @media (min-width: 320px) {
@@ -960,7 +1017,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 320px) {
   .projects__description {
     width: 100%;
-    z-index: 500;
+    z-index: 1;
     flex-wrap: wrap;
     align-items: flex-end;
     display: flex;
@@ -994,7 +1051,7 @@ body::-webkit-scrollbar-thumb {
   opacity: 0.4;
   content: "";
   display: flex;
-  z-index: 100;
+  z-index: 5;
   height: 100%;
   width: 100%;
   background-color: #ff5454;

@@ -9,7 +9,7 @@ let centerY = height / 2;
 //determines location of item on y axis
 let perspective = width * 1000;
 // width of perspective
-const DOT_RADIUS = 200; // Radius of the dots
+const DOT_RADIUS = 0.5; // Radius of the dots
 let GLOBE_RADIUS = Math.min(width, height) * 0.3;
 let dots = [];
 
