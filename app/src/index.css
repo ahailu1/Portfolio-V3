@@ -21,6 +21,7 @@
 
 *,
 body {
+  position: relative;
   margin: 0;
   padding: 0 0 0 0rem;
   box-sizing: border-box;
@@ -51,6 +52,19 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 0.9rem;
   background-color: #191930;
+}
+
+.loading__page {
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
 }
 
 @keyframes dissapear {
@@ -142,13 +156,10 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     position: fixed;
     align-items: center;
-    border-bottom: solid #10101f 2px;
     width: 100%;
     transition: all ease-in-out 0.5s;
-    height: 4.5rem;
-    z-index: 100;
+    z-index: 200;
     box-shadow: 0 0 15px 0 #10101f;
-    backdrop-filter: blur(12px);
   }
 }
 .navbar__layer {
@@ -156,20 +167,21 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 .navbar.toggled {
+  opacity: 0;
   height: 0px;
   transition: all ease-in-out 0.5s;
-  opacity: 0;
 }
 .navbar.toggle2 {
+  background-color: transparent;
   height: 5rem;
   box-shadow: none;
-  box-shadow: 0 0 7px 0 #e7e7e7;
   transition: all ease-in-out 0.75s;
 }
 .navbar__logo {
   background-color: transparent;
   z-index: 50;
   height: 4rem;
+  opacity: 0;
   margin: 0 0 0 2rem;
   top: 0;
 }
@@ -187,9 +199,9 @@ body::-webkit-scrollbar-thumb {
 .navbar__anchortag {
   color: #ff5454;
   font-weight: 800;
+  opacity: 0;
   letter-spacing: 1.5px;
-  z-index: 500;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   margin: 0 0.5rem 0 0.5rem;
   text-decoration: none;
@@ -251,11 +263,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
   }
 }
-@media (min-width: 1400px) {
-  .home {
-    margin: 0 0 0 200px;
-  }
-}
 @media (min-width: 320px) {
   .home__left {
     width: 100%;
@@ -279,7 +286,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1440px) {
   .home__left {
-    padding: 10rem 0 0 0;
+    padding: 10rem 0 0 10rem;
   }
 }
 @media (min-width: 320px) {
@@ -298,7 +305,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1024px) {
   .home__right {
-    border: solid yellow;
+    border: solid green;
   }
 }
 
@@ -325,6 +332,11 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+@media (min-width: 320px) {
+  .home__text__intro {
+    opacity: 0;
   }
 }
 @media (min-width: 768px) {
@@ -357,6 +369,9 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
   }
 }
+.home__text__welcome {
+  opacity: 0;
+}
 .home__text__welcome__wrapper {
   display: flex;
   z-index: 100;
@@ -382,6 +397,7 @@ body::-webkit-scrollbar-thumb {
   .home__text__span {
     position: relative;
     color: #ff3a3a;
+    opacity: 0;
     font-size: 4rem;
     font-weight: 800;
   }
@@ -403,9 +419,11 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .home__text__span::before {
+  text-shadow: 0 0 50px #ff3a3a;
+  animation: flicker 2s linear infinite forwards;
   position: absolute;
+  left: 0;
   content: "Alexander Hailu";
-  text-shadow: 0px 0px 7px #e7e7e7;
   filter: blur(5px) brightness(1);
 }
 @media (min-width: 320px) {
@@ -426,8 +444,17 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@keyframes flicker {
+  5%, 15%, 25%, 35%, 50%, 75%, 90% {
+    filter: blur(5px) brightness(1);
+  }
+  10%, 40%, 60% {
+    filter: blur(5px) brightness(0.5);
+  }
+}
 @media (min-width: 320px) {
   .sidebar {
+    opacity: 0;
     display: none;
   }
 }
@@ -784,6 +811,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 320px) {
   .form__wrapper {
+    z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -929,22 +957,12 @@ body::-webkit-scrollbar-thumb {
   padding: 0.5rem;
 }
 
-#canvas {
-  height: 100vh;
-  width: 100%;
-  background-color: transparent;
-  padding: 5rem 0 3rem;
-  position: absolute;
-  left: 0;
-  z-index: -10;
-  opacity: 1;
-}
-
 @media (min-width: 320px) {
   .projects {
     height: auto;
     display: flex;
     width: 100%;
+    z-index: 100;
     flex-direction: column;
   }
 }
@@ -1017,7 +1035,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 320px) {
   .projects__description {
     width: 100%;
-    z-index: 1;
+    z-index: 10;
     flex-wrap: wrap;
     align-items: flex-end;
     display: flex;
@@ -1032,6 +1050,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 320px) {
   .projects__section__image {
+    z-index: 5;
     position: relative;
     border-radius: 0.5rem;
     margin: 0 0 0 0;
@@ -1087,6 +1106,7 @@ body::-webkit-scrollbar-thumb {
     background-image: url("../images/footerbg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 200;
     align-items: center;
     justify-content: flex-end;
     background-position: center center;

@@ -16,9 +16,13 @@ loader.load('../app/images/Ubuntu_Bold.json', (font) => {
     let item = new THREE.AmbientLight( 'white', 0.95 );
 const mesh = new THREE.Mesh(geometry, [
     new THREE.MeshPhongMaterial({color : '#ffffff'}),
-    new THREE.MeshPhongMaterial({color: '#ff3a3a'}),
+    new THREE.MeshPhongMaterial({color: '#ff5e5e'}),
     new THREE.MeshPhongMaterial({color: '#f7f7f7'}),
 ]);
+
+let animation = () => {
+
+}
 
 var timeline = gsap.timeline();
 timeline.to(mesh.position, {
@@ -35,7 +39,6 @@ timeline.to(mesh.position, {
     z: "-10",
     y: "50",
     x: "-=70",
-    opacity: 0.95,
     ease: 'Power2.easeOut',
     yoyo: true,
     yoyoEase: true,
@@ -49,7 +52,7 @@ timeline.to(mesh.position, {
     yoyoEase: true,
 }).to(mesh.position, {
     duration: 2,
-    z: "+= 0.5",
+    z: "-= 50",
     x: "+= 0.5",
     y: "-=5",
     ease: 'Power2.easeOut',
@@ -65,7 +68,6 @@ timeline.to(mesh.position, {
     yoyo: true,
     yoyoEase: true,
     repeat: -1,
-
 })
 mesh.castShadow = true;
 scene.add(item)
@@ -77,11 +79,10 @@ loader.load('../app/images/Ubuntu_Bold.json', (font) => {
 		size: 25,
 		height:10,
     });
-    let item = new THREE.AmbientLight( 'white', 0.95 );
+    let item = new THREE.AmbientLight( 'white', 0.1 );
 const mesh = new THREE.Mesh(geometry, [
     new THREE.MeshPhongMaterial({color : '#ffffff'}),
-    new THREE.MeshPhongMaterial({color: '#ff3a3a'}),
-    new THREE.MeshPhongMaterial({color: '#f7f7f7'}),
+    new THREE.MeshPhongMaterial({color: '#ff5e5e'}),
 ]);
 
 var timeline = gsap.timeline();
@@ -89,7 +90,6 @@ timeline.to(mesh.position, {
     z: "-500",
     y: "-=25",
     x: "40",
-    opacity: 0.1,
     duration: 5,
     ease: 'Power2.easeOut',
     yoyo: true,
@@ -123,46 +123,7 @@ mesh.castShadow = true;
 scene.add(item)
 scene.add(mesh)
 })
-/*
-loader.load('../app/images/Ubuntu_Bold.json', (font) => {
-    let geometry1 = new THREE.TextGeometry('welcome to my portfolio',{
-       font: font,
-       height: 1.5,
-       size: 4.25 
-    })
-    let ambientLight1 = new THREE.AmbientLight('#ffffff', 0.9)
-    let material1 = [new THREE.MeshPhongMaterial({color : '#ffffff'}),
-    new THREE.MeshPhongMaterial({color: '#ff3a3a'})]
-    
-    let mesh1 = new THREE.Mesh(geometry1, material1)
-    gsap.to(mesh1.rotation, {
-        x: "-=0.1",
-        duration: 5,
-        stagger: 0.5,
-        repeat: 3,
-        ease: 'Power2.easeOut',
-        yoyo: true,
-        yoyoEase: true,
-    })
-    gsap.to(mesh1.position, {
-        x: "-=0.1",
-        y: "-=0.5",
-        duration: 5,
-        stagger: 0.5,
-        ease: 'Power2.easeOut',
-        yoyo: true,
-        yoyoEase: true,
-    })
-    mesh1.PerspectiveCamera = 0.8;
-    mesh1.position.x =  -85;
-    mesh1.position.y = -15;
-    mesh1.position.z = -6;
-    mesh1.rotation.y = -0.35;
-    mesh1.castShadow = true;
-    //scene.add(ambientLight1)
-    scene.add(mesh1)
-});
-*/
+
 let animate = () => {
 
     requestAnimationFrame(animate)

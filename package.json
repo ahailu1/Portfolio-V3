@@ -44,6 +44,6 @@
   },
   "dependencies": {
     "gsap": "^3.7.1",
-    "troika-three-text": "^0.42.0"
+    "three": "^0.132.2"
   }
 }

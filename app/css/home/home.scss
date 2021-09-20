@@ -25,7 +25,6 @@
     justify-content: space-around;
   }
   @media (min-width: 1400px) {
-    margin: 0 0 0 200px;
   }
   &__left {
     @media (min-width: 320px) {
@@ -44,7 +43,7 @@
       justify-content: flex-end;
     }
     @media(min-width: 1440px){
-      padding: 10rem 0 0 0;
+      padding: 10rem 0 0 10rem;
 
     }
   }
@@ -62,7 +61,7 @@
     @media (min-width: 768px) {
     }
     @media (min-width: 1024px) {
-      border: solid yellow;
+      border: solid green;
     }
   }
 }
@@ -88,6 +87,7 @@
     }
     &__intro{
       @media(min-width: 320px){
+        opacity:0;
 
       }
       @media (min-width: 768px) {
@@ -117,7 +117,7 @@
       }
     }
     &__welcome {
-
+      opacity: 0;
       &__wrapper{
         display: flex;
         z-index: 100;
@@ -139,6 +139,7 @@
       @media (min-width: 320px) {
         position: relative;
         color: $secondary-color;
+        opacity: 0;
         font-size: 4rem;
         font-weight: 800;
       }
@@ -153,9 +154,11 @@
         font-size: 4rem;
       }
       &::before{
+        text-shadow: 0 0 50px $secondary-color;
+        animation: flicker 2s linear infinite forwards;
         position: absolute;
+        left: 0;
         content: 'Alexander Hailu';
-        text-shadow: 0px 0px 7px $third-color;
         filter: blur(5px) brightness(1);
       }
       &__portfolio {
@@ -176,4 +179,13 @@
       }
     }
   }
+}
+@keyframes flicker {
+ 5%, 15%, 25%, 35%, 50%, 75%, 90% {
+   filter: blur(5px) brightness(1)
+ }
+ 10%, 40%, 60% {
+   filter: blur(5px) brightness(0.5)
+ }
+ 
 }

@@ -12,8 +12,6 @@ for (let i = 0; i <= 3; i++) {
 let initNavbar = () => {
   navAnchorTag = [...navAnchorTag];
   navAnchorTag.map((el, index) => {
-    console.log(projectSections);
-    console.log(index + "is index");
     el.onclick = () => {
       projectSections[index].scrollIntoView({
         behavior: "smooth",
@@ -22,16 +20,6 @@ let initNavbar = () => {
       });
     };
   });
-
-  /*
-    [...navAnchorTag].map((el, index) => {
-        return el.onclick = () => {
-            about.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
-        }
-
-    });
-
-*/
   window.addEventListener("scroll", (e) => {
     var formerVal = window.scrollY;
     var presentVal = window.scrollY;
@@ -45,7 +33,6 @@ let initNavbar = () => {
     if (initScroll <= formerVal) {
       initScroll = formerVal;
       navbar.classList.add("toggled");
-      console.log("down");
       //down
     } else {
       initScroll = presentVal;

@@ -18,13 +18,11 @@
     justify-content: space-between;
     position: fixed;
     align-items: center;
-    border-bottom: solid $fifth-color 2px;
     width: 100%;
     transition: all ease-in-out 0.5s;
-    height: 4.5rem;
-    z-index: 100;
+    z-index: 200;
     box-shadow: 0 0 15px 0 $fifth-color;
-    backdrop-filter: blur(12px);
+
     }
   @media (min-width: 768px) {
   }
@@ -33,21 +31,22 @@
     display: none;
   }
   &.toggled {
-
+    opacity: 0;
     height: 0px;
     transition: all ease-in-out 0.5s;
-    opacity: 0;
   }
   &.toggle2 {
+
+    background-color: transparent;
     height: 5rem;
     box-shadow: none;
-    box-shadow: 0 0 7px 0 $third-color;
     transition: all ease-in-out 0.75s;
   }
   &__logo {
     background-color: transparent;
     z-index: 50;
     height: 4rem;
+    opacity: 0;
     margin: 0 0 0 2rem;
     top: 0;
     &__container {
@@ -67,9 +66,9 @@
   &__anchortag {
     color: $fourth-color;
     font-weight: 800;
+    opacity:0;
     letter-spacing: 1.5px;
-    z-index: 500;
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin: 0 0.5rem 0 0.5rem;
     text-decoration: none;

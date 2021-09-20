@@ -1,6 +1,7 @@
 .form {
   &__wrapper {
     @media (min-width: 320px) {
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
