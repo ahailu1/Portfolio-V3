@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 const myTimeline = gsap.timeline()
 const scenes = new THREE.Scene();
@@ -22,7 +23,9 @@ particleGeometry.setAttribute('position', new THREE.BufferAttribute(itemsArray, 
 const thisMaterial = new THREE.PointsMaterial({size: .05});
 const sphere = new THREE.Points(geometry, thisMaterial)
 const particlesMesh = new THREE.Points(particleGeometry, thisMaterial);
-particleGeometry.setAttribute('position', new THREE.BufferAttribute(itemsArray, 3))
+particleGeometry.setAttribute('position', new THREE.BufferAttribute(itemsArray, 3));
+
+
 particlesMesh.position.x = 2;
 particlesMesh.position.y = 2;
 particlesMesh.position.z = 9;
@@ -175,5 +178,5 @@ let animation = () => {
 renderer.setSize( window.innerWidth, window.innerHeight );
 
 let page = document.getElementsByClassName('loading__page')[0];
-page.appendChild(renderer.domElement)
+page.appendChild(renderer.domElement);
 animation();
