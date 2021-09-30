@@ -470,7 +470,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #030014;
     align-items: center;
     justify-content: flex-end;
-    z-index: 20;
+    z-index: 100;
   }
 }
 .sidebar__icon {
@@ -832,6 +832,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1400px) {
   .form__wrapper {
+    justify-content: flex-start;
     margin: 0 0 0 200px;
   }
 }
@@ -847,11 +848,11 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 320px) {
   .form {
-    box-shadow: 0px 0 6px 0px #ff5454;
+    box-shadow: 0px 0 6px 0px #030014;
     display: flex;
     padding: 5rem 0 5rem 0;
     flex-direction: column;
-    border-radius: 0.35rem;
+    border-radius: 0.75rem;
     background-color: #10101f;
     justify-content: center;
     align-items: center;
@@ -870,7 +871,9 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1024px) {
   .form {
-    width: 60%;
+    width: 85%;
+    opacity: 0.85;
+    padding: 3.5rem 0 3.5rem 0;
   }
 }
 .form__content {
@@ -889,6 +892,11 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     text-shadow: 1px 3px 2px rgba(255, 85, 85, 0.5);
     font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .form__heading {
+    padding: 0rem 0 2rem 0;
   }
 }
 .form__button {
@@ -910,11 +918,11 @@ body::-webkit-scrollbar-thumb {
 
 .input {
   border: none;
-  padding: 0.5rem;
   font-weight: 600;
   color: #e7e7e7;
   background-color: #10101f;
   border-radius: 0.2rem;
+  padding: 0 0 0 0.5rem;
   flex-grow: 1;
 }
 .input:focus, .input:target, .input:visited {
@@ -922,7 +930,7 @@ body::-webkit-scrollbar-thumb {
   outline: none;
 }
 .input__message {
-  height: 15rem;
+  height: 10rem;
   width: auto;
   resize: none;
   border: solid #ff5454;
@@ -937,7 +945,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .input__container {
-  border: solid red;
   display: flex;
   margin: 1rem 0 1rem 0;
 }

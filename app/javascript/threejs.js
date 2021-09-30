@@ -29,8 +29,7 @@ timeline.to(mesh.position, {
     z: "-500",
     y: "-=15",
     x: "-100",
-    opacity: 0.1,
-    duration: 5,
+    duration: 3,
     ease: 'Power2.easeOut',
     yoyo: true,
     yoyoEase: true,
@@ -60,7 +59,7 @@ timeline.to(mesh.position, {
     yoyoEase: true,
     repeat: -1,
 }).to(mesh.rotation, {
-    duration: 5,
+    duration: 2,
     z: "+= 0.05",
     x: "-= 0.01",
     y: "+= 0.01",
@@ -70,8 +69,8 @@ timeline.to(mesh.position, {
     repeat: -1,
 })
 mesh.castShadow = true;
-scene.add(item)
-scene.add(mesh)
+scene.add(item);
+scene.add(mesh);
 })
 loader.load('../app/images/Ubuntu_Bold.json', (font) => {
     const geometry = new THREE.TextGeometry( 'V³', {
@@ -119,13 +118,16 @@ timeline.to(mesh.position, {
     repeat: -1,
 
 })
+
 mesh.castShadow = true;
 scene.add(item)
 scene.add(mesh)
 })
 
-let animate = () => {
 
+
+let animate = () => {
+    
     requestAnimationFrame(animate)
     renderer.render(scene, camera)
 }

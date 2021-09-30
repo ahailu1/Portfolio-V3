@@ -1,6 +1,4 @@
 import * as THREE from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import gsap from 'gsap';
 const myTimeline = gsap.timeline()
 const scenes = new THREE.Scene();
@@ -18,7 +16,7 @@ const loader = new THREE.FontLoader();
 for(let i = 0; i < particles * 3; i++){
     itemsArray[i] = (Math.random() - 0.4) * (Math.random() * 45);;
 }
-particleGeometry.setAttribute('position', new THREE.BufferAttribute(itemsArray, 10));
+particleGeometry.setAttribute('position', new THREE.BufferAttribute(itemsArray, 3));
 
 const thisMaterial = new THREE.PointsMaterial({size: .05});
 const sphere = new THREE.Points(geometry, thisMaterial)
@@ -52,13 +50,13 @@ let intro = () => {
 timeline1.to(particlesMesh.position, {
     x: "-15",
     y: "+15",
-    z: "+=5",
-     duration: 1,
+    z: "0",
+     duration: 3,
  }).to(particlesMesh.scale, {
      duration: 2,
-     x: 5.5,
-     y: 5.5,
-     z: 50.55,
+     x: 3,
+     y: 3,
+     z: 3,
  })
  return timeline1;
 }
@@ -99,10 +97,10 @@ let intro1 = () => {
 let afterEffects = ()=> {
     let timeline3 = new gsap.timeline()
     timeline3.to(particlesMesh.position, {
-        z: '+=200',
-        y: "-=15",
-        y: "-=15",
-        duration: 35,
+        z: '150',
+        y: "-=1",
+        y: "-=1",
+        duration: 50,
         repeat: -1,
         yoyo: true,
         yoyoEase: 10,
@@ -170,8 +168,16 @@ loader.load('../app/images/designlogo.glb', (image) => {
 //scenes.add(image.scene)
 });
 */
+var mouseY, mouseX;
+document.addEventListener('mousemove', (e) => {
+mouseY = e.clientY;
+mouseX = e.clientX;
+})
+
 let animation = () => {
-    //particlesMesh.rotation.z = mouseY * 0.003;
+    if(mouseY !== undefined) {
+        particlesMesh.rotation.y = mouseY * 0.0003;
+    }
     requestAnimationFrame(animation);
     renderer.render(scenes, camera);
 }
