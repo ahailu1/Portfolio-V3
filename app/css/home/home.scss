@@ -155,9 +155,10 @@
       }
       &::before{
         text-shadow: 0 0 50px $secondary-color;
-        animation: flicker 2s linear infinite forwards;
+        animation: flicker 3s linear infinite forwards;
         position: absolute;
         left: 0;
+        z-index: 100;
         content: 'Alexander Hailu';
         filter: blur(5px) brightness(1);
       }
@@ -185,7 +186,7 @@
    filter: blur(5px) brightness(1)
  }
  10%, 40%, 60% {
-   filter: blur(5px) brightness(0.5)
+   filter: blur(5px) brightness(0.35)
  }
  
 }

@@ -26,8 +26,8 @@ let animation = () => {
 
 var timeline = gsap.timeline();
 timeline.to(mesh.position, {
-    z: "-500",
-    y: "-=15",
+    z: "-100",
+    y: "-=10",
     x: "-100",
     duration: 3,
     ease: 'Power2.easeOut',

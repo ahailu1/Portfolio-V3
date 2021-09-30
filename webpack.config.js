@@ -24,7 +24,6 @@ const config = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-
     new MiniCssExtractPlugin(),
 
     // Add your plugins here
@@ -36,6 +35,11 @@ const config = {
         test: /\.(js|jsx)$/i,
         loader: "babel-loader",
       },
+     /* {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      */
       {
         test: /\.s[ac]ss$/i,
         use: [stylesHandler, "css-loader", "postcss-loader", "sass-loader"],
