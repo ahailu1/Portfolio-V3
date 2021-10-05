@@ -89,10 +89,24 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     position: fixed;
     align-items: center;
+    backdrop-filter: blur(8px);
     width: 100%;
     transition: all ease-in-out 0.5s;
     z-index: 200;
     box-shadow: 0 0 15px 0 #10101f;
+  }
+  .navbar::after {
+    background-color: #10101f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    display: flex;
+    box-shadow: 0 0 3px 0 #030014;
+    z-index: -1;
+    opacity: 0.5;
   }
 }
 @media (min-width: 768px) {
@@ -100,23 +114,20 @@ body::-webkit-scrollbar-thumb {
     display: flex;
   }
 }
-.navbar__layer {
-  position: relative;
-  display: none;
-}
 .navbar.toggled {
   opacity: 0;
   height: 0px;
   transition: all ease-in-out 0.5s;
 }
 .navbar.toggle2 {
+  opacity: 1;
   background-color: transparent;
   height: 5rem;
   box-shadow: none;
-  transition: all ease-in-out 0.75s;
+  transition: all ease-in-out 0.15s;
 }
 .navbar__logo {
-  background-color: transparent;
+  background-color: #10101f;
   z-index: 50;
   height: 4rem;
   opacity: 0;
@@ -142,11 +153,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .navbar__anchortag {
-  color: #ff5454;
-  font-weight: 800;
-  opacity: 0;
+  color: #ff3a3a;
+  font-weight: 700;
+  opacity: 1;
+  text-align: center;
   letter-spacing: 1.5px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   margin: 0 0.5rem 0 0.5rem;
   text-decoration: none;
@@ -154,23 +166,22 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar__anchortag::after {
   position: absolute;
-  top: -100%;
-  border: none;
-  opacity: 0;
   left: 0;
-  width: 0px;
   height: 3px;
   content: "";
+  bottom: 0;
   display: flex;
   opacity: 0;
   justify-content: center;
   align-self: flex-end;
-  width: 0%;
+  width: 10%;
+  background-color: #e7e7e7;
 }
 .navbar__anchortag:hover::after {
-  width: 100%;
-  left: 2%;
-  top: 100%;
+  width: 85%;
+  bottom: 0%;
+  left: 3%;
+  right: 0;
   transition: all ease-in-out 0.5s;
   background-color: #e7e7e7;
   opacity: 1;
@@ -372,6 +383,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     width: 100%;
+    border: solid green;
     padding: 5rem 2rem 5rem 2rem;
   }
 }
@@ -391,6 +403,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.75rem !important;
     color: #e7e7e7;
     font-weight: 800;
+    border: solid orange;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 768px) {

@@ -149,14 +149,18 @@ let animate = () => {
 animate();
 
 window.addEventListener('resize', () => {	
-
-   if(document.body.clientWidth < 1000 && document.body.clientWidth > 750 ) {
+   if(document.body.clientWidth < 1000 && document.body.clientWidth > 768 ) {
        renderer.setSize(400,400);
        camera.updateProjectionMatrix();
    }
-   if(document.body.clientWidth >= 320 && document.body.clientWidth <= 450){
+   if(document.body.clientWidth >= 320 && document.body.clientWidth <= 768){
     renderer.setSize(200,200);
     camera.updateProjectionMatrix();
+   }
+   if(document.body.clientWidth > 1000) {
+    renderer.setSize( 800,450);
+    camera.updateProjectionMatrix();
+
    }
 
 })

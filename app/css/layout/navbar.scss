@@ -18,32 +18,43 @@
     justify-content: space-between;
     position: fixed;
     align-items: center;
+    backdrop-filter: blur(8px);
     width: 100%;
     transition: all ease-in-out 0.5s;
     z-index: 200;
     box-shadow: 0 0 15px 0 $fifth-color;
-    }
+  &::after{
+    background-color: $fifth-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    display: flex;
+    box-shadow: 0 0 3px 0 $primary-color;
+    z-index: -1;
+    opacity: 0.5;
+  }  
+  }
   @media (min-width: 768px) {
     display: flex;
   }
-  &__layer {
-    position: relative;
-    display: none;
-  }
+
   &.toggled {
     opacity: 0;
     height: 0px;
     transition: all ease-in-out 0.5s;
   }
   &.toggle2 {
-
+    opacity: 1;
     background-color: transparent;
     height: 5rem;
     box-shadow: none;
-    transition: all ease-in-out 0.75s;
+    transition: all ease-in-out 0.15s;
   }
   &__logo {
-    background-color: transparent;
+    background-color: $fifth-color;
     z-index: 50;
     height: 4rem;
     opacity: 0;
@@ -70,34 +81,35 @@
 
   }
   &__anchortag {
-    color: $fourth-color;
-    font-weight: 800;
-    opacity:0;
+    color: $secondary-color;
+    font-weight: 700;
+    opacity:1;
+    text-align: center;
     letter-spacing: 1.5px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin: 0 0.5rem 0 0.5rem;
     text-decoration: none;
     position: relative;
     &::after {
       position: absolute;
-      top: -100%;
-      border: none;
-      opacity: 0;
       left: 0;
-      width: 0px;
       height: 3px;
       content: "";
+      bottom: 0;
       display: flex;
       opacity: 0;
       justify-content: center;
       align-self: flex-end;
-      width: 0%;
+      width: 10%;
+      background-color: $third-color;
+
     }
     &:hover::after {
-      width: 100%;
-      left: 2%;
-      top: 100%;
+      width: 85%;
+      bottom: 0%;
+      left: 3%;
+      right: 0;
       transition: all ease-in-out 0.5s;
       background-color: $third-color;
       opacity: 1;
