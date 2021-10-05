@@ -1,4 +1,3 @@
-import * as THREE from 'three';
 import './index.css';
 import "../javascript/fade_in";
 import "../javascript/navbar";

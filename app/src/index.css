@@ -85,7 +85,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 320px) {
   .navbar {
-    display: flex;
+    display: none;
     justify-content: space-between;
     position: fixed;
     align-items: center;
@@ -93,6 +93,11 @@ body::-webkit-scrollbar-thumb {
     transition: all ease-in-out 0.5s;
     z-index: 200;
     box-shadow: 0 0 15px 0 #10101f;
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
   }
 }
 .navbar__layer {
@@ -125,9 +130,16 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 40%;
 }
-.navbar__list {
-  display: flex;
-  list-style: none;
+@media (min-width: 320px) {
+  .navbar__list {
+    display: none;
+  }
+}
+@media (min-width: 780px) {
+  .navbar__list {
+    display: flex;
+    list-style: none;
+  }
 }
 .navbar__anchortag {
   color: #ff5454;
@@ -162,6 +174,138 @@ body::-webkit-scrollbar-thumb {
   transition: all ease-in-out 0.5s;
   background-color: #e7e7e7;
   opacity: 1;
+}
+
+.navbar__mobile__wrapper {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 320px) {
+  .navbar__mobile__wrapper.toggled {
+    transition: all ease-in-out 0.5s 0.05s;
+    backdrop-filter: blur(4px);
+    width: 40%;
+    z-index: 500;
+  }
+}
+@media (min-width: 768px) {
+  .navbar__mobile__wrapper.toggled {
+    width: 0px;
+    display: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (min-width: 320px) {
+  .navbar__mobile {
+    z-index: 500;
+    padding: 2rem 2rem 0 0;
+    margin: 0 0 0 0;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-end;
+    position: fixed;
+    right: 0rem;
+    width: 0;
+    height: 100%;
+    top: 0;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+  }
+}
+@media (min-width: 320px) and (min-width: 320px) {
+  .navbar__mobile.toggled {
+    visibility: visible;
+    background-color: #10101f;
+    transition: all ease-in-out 0.5s;
+    width: 60%;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  .navbar__mobile.toggled {
+    visibility: hidden;
+    background-color: transparent;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  .navbar__mobile {
+    display: none;
+  }
+}
+@media (min-width: 320px) {
+  .navbar__mobile__list {
+    flex-grow: 1;
+    z-index: 100;
+    width: 0%;
+    justify-content: flex-start;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+  }
+  .navbar__mobile__list.toggled {
+    align-items: center;
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+    visibility: visible;
+  }
+}
+.navbar__mobile__item {
+  color: #ff3a3a;
+  font-size: 2.5rem;
+  padding: 1rem 0 1rem 0;
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .toggled__menu {
+    background-color: #ff3a3a;
+    height: 5px;
+    width: 4rem;
+    border-radius: 0.45rem;
+    display: flex;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+  }
+}
+.toggled__menu__container {
+  flex-direction: column;
+  display: flex;
+}
+.toggled__menu:nth-child(2) {
+  margin: 0.75rem 0 0.75rem 0;
+}
+
+@media (min-width: 320px) {
+  .toggled__menu.top {
+    transform: rotateZ(407deg) translateY(1.2rem) translateX(0.45rem);
+    transition: all ease-in-out 0.5s;
+  }
+}
+@media (min-width: 768px) {
+  .toggled__menu.top {
+    transition: none;
+    transform: none;
+  }
+}
+.toggled__menu.middle {
+  width: 0px;
+  opacity: 0;
+}
+@media (min-width: 320px) {
+  .toggled__menu.bottom {
+    transition: all ease-in-out 0.5s;
+    transform: rotateZ(-47deg) translateY(-1.5rem) translateX(0.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .toggled__menu.bottom {
+    transition: none;
+    transform: none;
+  }
 }
 
 @media (min-width: 320px) {
@@ -807,7 +951,7 @@ body::-webkit-scrollbar-thumb {
   .form {
     width: 85%;
     opacity: 0.85;
-    padding: 3.5rem 0 3.5rem 0;
+    padding: 4rem 0 4rem 0;
   }
 }
 .form__content {
@@ -870,7 +1014,7 @@ body::-webkit-scrollbar-thumb {
   border: solid #ff5454;
   display: flex;
   width: 100%;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 1.5rem 0;
   border-radius: 0.35rem;
 }
 .input__message:focus {

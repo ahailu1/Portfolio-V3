@@ -56,7 +56,7 @@ justify-content: flex-start;
   @media (min-width: 1024px) {
     width: 85%;
     opacity: 0.85;
-    padding: 3.5rem 0 3.5rem 0;
+    padding: 4rem 0 4rem 0;
   }
   &__content {
     align-items: flex-start;
@@ -120,7 +120,7 @@ justify-content: flex-start;
     border: solid $fourth-color;
     display: flex;
     width: 100%;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0 1.5rem 0;
     border-radius: 0.35rem;
     &:focus {
       border: solid $third-color;

@@ -14,7 +14,7 @@
   }
 */
   @media (min-width: 320px) {
-    display: flex;
+    display: none;
     justify-content: space-between;
     position: fixed;
     align-items: center;
@@ -22,9 +22,9 @@
     transition: all ease-in-out 0.5s;
     z-index: 200;
     box-shadow: 0 0 15px 0 $fifth-color;
-
     }
   @media (min-width: 768px) {
+    display: flex;
   }
   &__layer {
     position: relative;
@@ -59,8 +59,14 @@
   }
 
   &__list {
-    display: flex;
-    list-style: none;
+    @media(min-width: 320px){
+      display: none;
+    }
+    @media(min-width: 780px){
+      display: flex;
+      list-style: none;
+  
+    }
 
   }
   &__anchortag {

@@ -7,10 +7,10 @@ camera.position.x = 3;
 camera.position.y = 20;
 const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true})
 const loader = new THREE.FontLoader();
-loader.load('../app/images/Ubuntu_Bold.json', (font) => {
+loader.load('./Ubuntu_Bold.json', (font) => {
     const geometry = new THREE.TextGeometry( 'Portfolio', {
 		font: font,
-		size: 30,
+		size: 25,
 		height:10,
     });
     let item = new THREE.AmbientLight( 'white', 0.95 );
@@ -20,9 +20,7 @@ const mesh = new THREE.Mesh(geometry, [
     new THREE.MeshPhongMaterial({color: '#f7f7f7'}),
 ]);
 
-let animation = () => {
 
-}
 
 var timeline = gsap.timeline();
 timeline.to(mesh.position, {
@@ -72,7 +70,7 @@ mesh.castShadow = true;
 scene.add(item);
 scene.add(mesh);
 })
-loader.load('../app/images/Ubuntu_Bold.json', (font) => {
+loader.load('./Ubuntu_Bold.json', (font) => {
     const geometry = new THREE.TextGeometry( 'V³', {
 		font: font,
 		size: 25,
@@ -83,13 +81,12 @@ const mesh = new THREE.Mesh(geometry, [
     new THREE.MeshPhongMaterial({color : '#ffffff'}),
     new THREE.MeshPhongMaterial({color: '#ff5e5e'}),
 ]);
-
 var timeline = gsap.timeline();
 timeline.to(mesh.position, {
     z: "-500",
     y: "-=25",
     x: "40",
-    duration: 5,
+    duration: 2,
     ease: 'Power2.easeOut',
     yoyo: true,
     yoyoEase: true,
@@ -116,24 +113,55 @@ timeline.to(mesh.position, {
     y: "25",
     ease: 'Power2.easeOut',
     repeat: -1,
-
 })
+
 
 mesh.castShadow = true;
 scene.add(item)
 scene.add(mesh)
 })
-
-
+/*
+let resizeRendererToDisplaySize = (renderer) => {
+    const canvas = renderer.domElement;
+    const pixelRatio = window.devicePixelRatio;
+    const width  = canvas.clientWidth  * pixelRatio | 0;
+    const height = canvas.clientHeight * pixelRatio | 0;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+*/
+  
 
 let animate = () => {
-    
-    requestAnimationFrame(animate)
+    /*
+    if (resizeRendererToDisplaySize(renderer)) {
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
+      }
+      */
+    requestAnimationFrame(animate);
     renderer.render(scene, camera)
 }
-animate()
+animate();
 
-renderer.setSize( 700, 300 );
+window.addEventListener('resize', () => {	
+
+   if(document.body.clientWidth < 1000 && document.body.clientWidth > 750 ) {
+       renderer.setSize(400,400);
+       camera.updateProjectionMatrix();
+   }
+   if(document.body.clientWidth >= 320 && document.body.clientWidth <= 450){
+    renderer.setSize(200,200);
+    camera.updateProjectionMatrix();
+   }
+
+})
+
+renderer.setSize( 800,450);
 
 document.getElementsByClassName('home__text__welcome__wrapper')[0].appendChild(renderer.domElement);
 

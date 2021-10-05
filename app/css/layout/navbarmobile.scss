@@ -1,0 +1,132 @@
+
+.navbar__mobile__wrapper{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &.toggled{
+        @media(min-width: 320px) {
+            transition: all ease-in-out 0.5s 0.05s;
+            backdrop-filter: blur(4px);
+            width: 40%;
+            z-index: 500;    
+        }
+        @media(min-width: 768px){
+            width: 0px;
+            display: none;
+            backdrop-filter: none;
+        }
+    }
+}
+.navbar__mobile{
+    @media(min-width: 320px){
+        z-index: 500;
+        padding: 2rem 2rem 0 0;
+        margin: 0 0 0 0;
+        flex-direction: column;
+        height: auto;
+        align-items: flex-end;
+        position: fixed;
+        right: 0rem;
+        width: 0;
+        height: 100%;
+        top: 0;
+        transition: all ease-in-out 0.5s;
+        display: flex;
+        &.toggled{
+            @media(min-width: 320px){
+                visibility: visible;
+                background-color: $fifth-color;
+                transition: all ease-in-out 0.5s;
+                width: 60%;            }
+            @media(min-width: 768px){
+                visibility: hidden;
+                background-color: transparent;
+            }
+            
+        }
+        @media(min-width: 768px){
+            display: none;
+        }
+    }
+    &__list{
+        @media(min-width:320px){
+           flex-grow: 1;
+           z-index: 100;
+           width: 0%;
+           justify-content: flex-start;
+           display: flex;
+           visibility: hidden;
+           flex-direction: column;
+        &.toggled{
+            align-items: center;
+            width: 100%;
+            transition: all ease-in-out 0.5s;
+            visibility: visible;
+        }
+        } 
+
+    }
+    &__item{
+        color: $secondary-color;
+        font-size: 2.5rem;
+        padding: 1rem 0 1rem 0;
+        margin: 0.5rem 0 0.5rem 0;
+        font-weight: 800;
+        cursor: pointer; 
+    }   
+}
+.toggled__menu{
+    @media(min-width:320px){
+        background-color: $secondary-color;
+        height: 5px;
+        width: 4rem;
+        border-radius: 0.45rem;
+        display: flex;
+        transition: all ease-in-out 0.5s;   
+        cursor: pointer; 
+    }
+    @media(min-width: 420px){
+
+    }
+
+    &__container{
+        flex-direction: column;
+        display: flex;
+    }
+&:nth-child(2){
+    margin: 0.75rem 0 0.75rem 0;
+}
+
+}
+.toggled__menu{
+    &.top{
+        
+        @media(min-width: 320px){
+            transform: rotateZ(407deg) translateY(1.2rem) translateX(0.45rem);
+            transition: all ease-in-out 0.5s;
+    
+        }
+        @media(min-width: 768px){
+            transition: none;
+            transform:none;
+        }
+
+    }
+    &.middle{
+        width: 0px;
+        opacity: 0;
+    }
+    &.bottom{
+        @media(min-width: 320px){
+            transition: all ease-in-out 0.5s;
+            transform: rotateZ(-47deg) translateY(-1.5rem) translateX(0.5rem);
+        
+        }
+        @media(min-width: 768px){
+            transition: none;
+            transform:none;
+        }
+
+    }
+}

@@ -1,5 +1,9 @@
 var navbar = document.getElementById("mynavbar");
 var navAnchorTag = document.getElementsByClassName("navbar__anchortag");
+var mobileMenu = document.getElementsByClassName("toggled__menu__container")[0];
+var toggleMenu = document.getElementsByClassName("toggled__menu");
+var mobileList = document.getElementsByClassName("navbar__mobile__list")[0];
+var mobileContainer = document.getElementsByClassName("navbar__mobile")[0];
 
 var initScroll = 0;
 var projectNames = ["home", "about", "all__projects", "form"];
@@ -7,6 +11,17 @@ var projectSections = [];
 
 for (let i = 0; i <= 3; i++) {
   projectSections.push(document.getElementsByClassName(projectNames[i])[0]);
+}
+
+
+mobileMenu.onclick = () => {
+ toggleMenu[0].classList.toggle('top');
+ toggleMenu[1].classList.toggle('middle')
+ toggleMenu[2].classList.toggle('bottom')
+mobileList.classList.toggle("toggled");
+mobileContainer.classList.toggle('toggled');
+document.getElementsByClassName("navbar__mobile__wrapper")[0].classList.toggle("toggled");
+
 }
 
 let initNavbar = () => {

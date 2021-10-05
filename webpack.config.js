@@ -64,7 +64,15 @@ const config = {
   },
   resolve: {
     roots: [path.resolve(__dirname, "app/images")],
+    fallback: {
+      "fs": false,
+      "path": false,
+      "util": false,
+      "os" : false,
+      "stream": false,
+    },
   },
+
 };
 
 module.exports = () => {
