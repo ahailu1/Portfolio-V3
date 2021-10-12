@@ -86,7 +86,7 @@
         transition: all ease-in-out 0.5s;   
         cursor: pointer; 
     }
-    @media(min-width: 420px){
+    @media(min-width: 768px){
 
     }
 
@@ -101,9 +101,8 @@
 }
 .toggled__menu{
     &.top{
-        
         @media(min-width: 320px){
-            transform: rotateZ(407deg) translateY(1.2rem) translateX(0.45rem);
+            transform: rotateZ(407deg) translateY(1.2rem) translateX(0.4rem);
             transition: all ease-in-out 0.5s;
     
         }
@@ -121,7 +120,6 @@
         @media(min-width: 320px){
             transition: all ease-in-out 0.5s;
             transform: rotateZ(-47deg) translateY(-1.5rem) translateX(0.5rem);
-        
         }
         @media(min-width: 768px){
             transition: none;

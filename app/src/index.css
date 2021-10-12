@@ -292,7 +292,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width: 320px) {
   .toggled__menu.top {
-    transform: rotateZ(407deg) translateY(1.2rem) translateX(0.45rem);
+    transform: rotateZ(407deg) translateY(1.2rem) translateX(0.4rem);
     transition: all ease-in-out 0.5s;
   }
 }
@@ -403,7 +403,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.75rem !important;
     color: #e7e7e7;
     font-weight: 800;
-    border: solid orange;
     width: 80%;
     display: flex;
     flex-direction: column;

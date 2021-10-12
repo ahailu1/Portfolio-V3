@@ -111,7 +111,7 @@ var mouseY, mouseX;
 document.addEventListener('mousemove', (e) => {
 mouseY = e.clientY;
 mouseX = e.clientX;
-})
+});
 
 let animation = () => {
     if(mouseY !== undefined) {
