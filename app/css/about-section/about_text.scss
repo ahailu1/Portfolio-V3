@@ -49,12 +49,18 @@
     @media (min-width: 768px) {
     }
     @media (min-width: 1024px) {
-      margin: 0;
+      border-radius: 0.35rem 0.35rem 0 0;
+      z-index: 100;
+      background-color: $fifth-color;
+      margin: 2rem 0 2rem 0;
+      padding: 1.5rem 2rem 1.5rem 2rem;
+
     }
   }
   &__paragraph {
     @media (min-width: 320px) {
       font-weight: 400;
+      background-color: $fifth-color;
       letter-spacing: 1.25px;
       line-height: 2rem;
       font-size: 1.25rem;
@@ -62,7 +68,9 @@
     @media (min-width: 968px) {
       font-size: 0.9rem;
       width: 70%;
-      padding: 2rem 0 0 0;
+      border-bottom: solid $fourth-color;
+      padding: 1.5rem 2rem 1.5rem 2rem;
+      z-index: 100;
     }
   }
   &__image {
