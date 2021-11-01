@@ -147,7 +147,7 @@
    &::before{
      @media(min-width: 320px){
       text-shadow: 0 0 50px $secondary-color;
-      animation: flicker 3s linear infinite forwards;
+      animation: flicker 5s linear infinite forwards;
       position: absolute;
       left: 0;
       z-index: 100;
@@ -181,7 +181,7 @@
       }
       &::before{
         text-shadow: 0 0 50px $secondary-color;
-        animation: flicker 3s linear infinite forwards;
+        animation: flicker 5s linear infinite forwards;
         position: absolute;
         left: 0;
         z-index: 100;

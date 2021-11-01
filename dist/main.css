@@ -501,8 +501,8 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 320px) {
   .home__text__welcome.portfolio::before {
     text-shadow: 0 0 50px #ff3a3a;
-    -webkit-animation: flicker 3s linear infinite forwards;
-            animation: flicker 3s linear infinite forwards;
+    -webkit-animation: flicker 5s linear infinite forwards;
+            animation: flicker 5s linear infinite forwards;
     position: absolute;
     left: 0;
     z-index: 100;
@@ -542,8 +542,8 @@ body::-webkit-scrollbar-thumb {
 }
 .home__text__span::before {
   text-shadow: 0 0 50px #ff3a3a;
-  -webkit-animation: flicker 3s linear infinite forwards;
-          animation: flicker 3s linear infinite forwards;
+  -webkit-animation: flicker 5s linear infinite forwards;
+          animation: flicker 5s linear infinite forwards;
   position: absolute;
   left: 0;
   z-index: 100;
@@ -921,7 +921,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 968px) {
   .about__paragraph {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     width: 70%;
     border-bottom: solid #ff5454;
     padding: 1.5rem 2rem 1.5rem 2rem;
