@@ -9,13 +9,46 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./app/images/normalmap.jpg":
+/*!**********************************!*\
+  !*** ./app/images/normalmap.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"63ea1821465a26c64947.jpg\";\n\n//# sourceURL=webpack://my-webpack-project/./app/images/normalmap.jpg?");
+
+/***/ }),
+
+/***/ "./app/images/surfacemoon.jpg":
+/*!************************************!*\
+  !*** ./app/images/surfacemoon.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"5808ef1ce539c96b5463.jpg\";\n\n//# sourceURL=webpack://my-webpack-project/./app/images/surfacemoon.jpg?");
+
+/***/ }),
+
+/***/ "./app/images/surfacemoon1.jpg":
+/*!*************************************!*\
+  !*** ./app/images/surfacemoon1.jpg ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"a2edaf8548e78714814b.jpg\";\n\n//# sourceURL=webpack://my-webpack-project/./app/images/surfacemoon1.jpg?");
+
+/***/ }),
+
 /***/ "./app/javascript/fade_in.js":
 /*!***********************************!*\
   !*** ./app/javascript/fade_in.js ***!
   \***********************************/
 /***/ (() => {
 
-eval("var aboutTitle = document.getElementsByClassName(\"about__header\")[0];\nvar aboutSectionText = document.getElementsByClassName(\"about\")[0];\nvar technologyTitle = document.getElementsByClassName(\"about__section__skills__title\")[0];\nvar technologySectionText = document.getElementsByClassName(\"about__section skills\")[0];\n\nvar framework = function framework(title, section) {\n  var documentHeight = window.innerHeight;\n  console.log(title);\n  var sectionTop = title.getBoundingClientRect().top;\n\n  if (documentHeight > sectionTop) {\n    title.style.opacity = \"1\";\n    section.style.opacity = \"1\";\n  } else {\n    title.style.opacity = \"0\";\n    section.style.opacity = \"0\";\n  }\n};\n\nvar init = function init() {\n  document.addEventListener(\"scroll\", function (e) {\n    framework(aboutTitle, aboutSectionText);\n    framework(technologyTitle, technologySectionText);\n    /*\n    var windowHeight = window.innerHeight;\n    var top = aboutTitle.getBoundingClientRect().top;\n    if (top < windowHeight) {\n      aboutSectionText.style.opacity = \"1\";\n    } else {\n      aboutSectionText.style.opacity = \"0\";\n    }\n    */\n  });\n};\n\ninit();\n\n//# sourceURL=webpack://my-webpack-project/./app/javascript/fade_in.js?");
+eval("var aboutTitle = document.getElementsByClassName(\"about__header\")[0];\nvar aboutSectionText = document.getElementsByClassName(\"about\")[0];\nvar technologyTitle = document.getElementsByClassName(\"about__section__skills__title\")[0];\nvar technologySectionText = document.getElementsByClassName(\"about__section skills\")[0];\n\nvar framework = function framework(title, section) {\n  var documentHeight = window.innerHeight;\n  var sectionTop = title.getBoundingClientRect().top;\n\n  if (documentHeight > sectionTop) {\n    title.style.opacity = \"1\";\n    section.style.opacity = \"1\";\n  } else {\n    title.style.opacity = \"0\";\n    section.style.opacity = \"0\";\n  }\n};\n\nvar init = function init() {\n  document.addEventListener(\"scroll\", function (e) {\n    framework(aboutTitle, aboutSectionText);\n    framework(technologyTitle, technologySectionText);\n    /*\n    var windowHeight = window.innerHeight;\n    var top = aboutTitle.getBoundingClientRect().top;\n    if (top < windowHeight) {\n      aboutSectionText.style.opacity = \"1\";\n    } else {\n      aboutSectionText.style.opacity = \"0\";\n    }\n    */\n  });\n};\n\ninit();\n\n//# sourceURL=webpack://my-webpack-project/./app/javascript/fade_in.js?");
 
 /***/ }),
 
@@ -26,7 +59,7 @@ eval("var aboutTitle = document.getElementsByClassName(\"about__header\")[0];\nv
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ \"./node_modules/three/build/three.module.js\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar myTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\nvar group = new three__WEBPACK_IMPORTED_MODULE_1__.Group();\nvar scenes = new three__WEBPACK_IMPORTED_MODULE_1__.Scene();\nvar geometry = new three__WEBPACK_IMPORTED_MODULE_1__.TorusGeometry(.7, .2, 16, 100);\nvar camera = new three__WEBPACK_IMPORTED_MODULE_1__.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);\nvar renderer = new three__WEBPACK_IMPORTED_MODULE_1__.WebGLRenderer({\n  antialias: true,\n  alpha: true,\n  transparent: false\n});\ncamera.position.set(0, 0, 100);\nscenes.add(camera);\nvar particleGeometry = new three__WEBPACK_IMPORTED_MODULE_1__.BufferGeometry();\nvar particles = 15000;\nvar itemsArray = new Float32Array(particles * 3);\nvar mapTexture = new three__WEBPACK_IMPORTED_MODULE_1__.TextureLoader().load('../app/images/normalmap1.jpg');\nvar moonTexture = new three__WEBPACK_IMPORTED_MODULE_1__.TextureLoader().load('../app/images/surfacemoon.jpg'); //new THREE.MeshStandardMaterial\n\nvar moon = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(new three__WEBPACK_IMPORTED_MODULE_1__.SphereGeometry(2, 16, 16), new three__WEBPACK_IMPORTED_MODULE_1__.MeshStandardMaterial({\n  normalMap: mapTexture,\n  map: moonTexture\n}));\nvar light = new three__WEBPACK_IMPORTED_MODULE_1__.AmbientLight(0xffffff);\nlight.position.set(25, 15, 1);\n\nfor (var i = 0; i < particles * 3; i++) {\n  itemsArray[i] = (Math.random() - 0.4) * (Math.random() * 45);\n  ;\n}\n\nparticleGeometry.setAttribute('position', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(itemsArray, 3));\nvar thisMaterial = new three__WEBPACK_IMPORTED_MODULE_1__.PointsMaterial({\n  size: .005,\n  transparent: true\n});\nvar sphere = new three__WEBPACK_IMPORTED_MODULE_1__.Points(geometry, thisMaterial);\nvar particlesMesh = new three__WEBPACK_IMPORTED_MODULE_1__.Points(particleGeometry, thisMaterial);\nparticleGeometry.setAttribute('position', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(itemsArray, 3));\nparticlesMesh.scale.y = 0.01;\nparticlesMesh.scale.x = 0.01;\nparticlesMesh.scale.z = 0.01;\nvar pointsLight = new three__WEBPACK_IMPORTED_MODULE_1__.PointLight(0xffffff);\nscenes.add(pointsLight);\nvar mouseY,\n    mouseX = 0;\ndocument.addEventListener('mousemove', function (e) {\n  mouseY = e.clientY;\n  mouseX = e.clientX;\n});\nscenes.add(light);\nmoon.position.set(10, 3, 80);\n\nvar initMoon = function initMoon() {\n  var moonAnimation = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  moonAnimation.to(moon.rotation, {\n    y: 20,\n    duration: 42,\n    repeat: -1\n  });\n  return moonAnimation;\n};\n\ngsap__WEBPACK_IMPORTED_MODULE_0__.default.to(moon.rotation, {\n  y: 360,\n  duration: 400,\n  repeat: -1\n});\n\nvar intro = function intro() {\n  var timeline1 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline1.to(particlesMesh.position, {\n    x: \"-15\",\n    y: \"+15\",\n    z: \"0\",\n    duration: 3\n  }).to(particlesMesh.scale, {\n    duration: 2,\n    x: 3,\n    y: 3,\n    z: 3\n  });\n  return timeline1;\n};\n\nvar intro1 = function intro1() {\n  var timeline2 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline2.to('.navbar__logo', {\n    opacity: 1,\n    ease: 'power3.out'\n  }).to('.navbar__anchortag', {\n    opacity: 1,\n    ease: \"elastic.out(13, 1)\"\n  }).to('.home__text__intro', {\n    opacity: 1,\n    duration: 1,\n    ease: \"elastic.out(13, 1)\",\n    y: \"-=5\"\n  }).to('.home__text__span', {\n    ease: \"elastic.out(20, 1)\",\n    y: \"+=1\",\n    opacity: 1\n  }).to('.home__text__welcome', {\n    ease: \"elastic.out(15, 0.3)\",\n    y: \"+=2\",\n    delay: 0.5,\n    opacity: 1\n  }).to('.sidebar', {\n    opacity: 1,\n    duration: 1\n  });\n  return timeline2;\n};\n\nvar afterEffects = function afterEffects() {\n  var _timeline3$to;\n\n  var timeline3 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline3.to(particlesMesh.position, (_timeline3$to = {\n    z: '150',\n    y: \"-=1\"\n  }, _defineProperty(_timeline3$to, \"y\", \"-=1\"), _defineProperty(_timeline3$to, \"duration\", 50), _defineProperty(_timeline3$to, \"repeat\", -1), _defineProperty(_timeline3$to, \"yoyo\", true), _timeline3$to));\n  return timeline3;\n};\n\nvar callback = function callback() {\n  return myTimeline.add(intro()).add(intro1()).add(afterEffects());\n};\n\nvar callItem = function callItem(callback) {\n  callback();\n};\n\ncallItem(callback);\nvar mouseY, mouseX;\ndocument.addEventListener('mousemove', function (e) {\n  mouseY = e.clientY;\n  mouseX = e.clientX;\n});\n\nvar animation = function animation() {\n  if (mouseY !== undefined) {\n    particlesMesh.rotation.y = mouseY * 0.0003;\n  }\n\n  requestAnimationFrame(animation);\n  renderer.render(scenes, camera);\n};\n\nrenderer.setSize(window.innerWidth, window.innerHeight);\nscenes.add(moon);\nscenes.add(sphere, particlesMesh);\nvar page = document.getElementsByClassName('loading__page')[0];\npage.appendChild(renderer.domElement);\nanimation();\n\n//# sourceURL=webpack://my-webpack-project/./app/javascript/loadingpage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ \"./node_modules/three/build/three.module.js\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _images_normalmap_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/normalmap.jpg */ \"./app/images/normalmap.jpg\");\n/* harmony import */ var _images_surfacemoon1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/surfacemoon1.jpg */ \"./app/images/surfacemoon1.jpg\");\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar myTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\nvar group = new three__WEBPACK_IMPORTED_MODULE_1__.Group();\nvar scenes = new three__WEBPACK_IMPORTED_MODULE_1__.Scene();\nvar geometry = new three__WEBPACK_IMPORTED_MODULE_1__.TorusGeometry(.7, .2, 16, 100);\nvar camera = new three__WEBPACK_IMPORTED_MODULE_1__.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);\nvar renderer = new three__WEBPACK_IMPORTED_MODULE_1__.WebGLRenderer({\n  antialias: true,\n  alpha: true,\n  transparent: false\n});\ncamera.position.set(0, 0, 100);\nscenes.add(camera);\nvar particleGeometry = new three__WEBPACK_IMPORTED_MODULE_1__.BufferGeometry();\nvar particles = 15000;\nvar itemsArray = new Float32Array(particles * 3);\n\n\nvar mapTexture = new three__WEBPACK_IMPORTED_MODULE_1__.TextureLoader().load(_images_normalmap_jpg__WEBPACK_IMPORTED_MODULE_2__);\nvar moonTexture = new three__WEBPACK_IMPORTED_MODULE_1__.TextureLoader().load(_images_surfacemoon1_jpg__WEBPACK_IMPORTED_MODULE_3__); //new THREE.MeshStandardMaterial\n\nvar moon = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(new three__WEBPACK_IMPORTED_MODULE_1__.SphereGeometry(2, 16, 16), new three__WEBPACK_IMPORTED_MODULE_1__.MeshStandardMaterial({\n  normalMap: mapTexture,\n  map: moonTexture\n}));\nvar light = new three__WEBPACK_IMPORTED_MODULE_1__.AmbientLight(0xffffff);\nlight.position.set(25, 15, 1);\n\nfor (var i = 0; i < particles * 3; i++) {\n  itemsArray[i] = (Math.random() - 0.4) * (Math.random() * 45);\n  ;\n}\n\nparticleGeometry.setAttribute('position', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(itemsArray, 3));\nvar thisMaterial = new three__WEBPACK_IMPORTED_MODULE_1__.PointsMaterial({\n  size: .005,\n  transparent: true\n});\nvar sphere = new three__WEBPACK_IMPORTED_MODULE_1__.Points(geometry, thisMaterial);\nvar particlesMesh = new three__WEBPACK_IMPORTED_MODULE_1__.Points(particleGeometry, thisMaterial);\nparticleGeometry.setAttribute('position', new three__WEBPACK_IMPORTED_MODULE_1__.BufferAttribute(itemsArray, 3));\nparticlesMesh.scale.y = 0.01;\nparticlesMesh.scale.x = 0.01;\nparticlesMesh.scale.z = 0.01;\nvar pointsLight = new three__WEBPACK_IMPORTED_MODULE_1__.PointLight(0xffffff);\nscenes.add(pointsLight);\nvar mouseY,\n    mouseX = 0;\ndocument.addEventListener('mousemove', function (e) {\n  mouseY = e.clientY;\n  mouseX = e.clientX;\n});\nscenes.add(light);\nmoon.position.set(10, 3, 80);\n\nvar initMoon = function initMoon() {\n  var moonAnimation = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  moonAnimation.to(moon.rotation, {\n    y: 20,\n    duration: 42,\n    repeat: -1\n  });\n  return moonAnimation;\n};\n\ngsap__WEBPACK_IMPORTED_MODULE_0__.default.to(moon.rotation, {\n  y: 360,\n  duration: 400,\n  repeat: -1\n});\n\nvar intro = function intro() {\n  var timeline1 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline1.to(particlesMesh.position, {\n    x: \"-15\",\n    y: \"+15\",\n    z: \"0\",\n    duration: 3\n  }).to(particlesMesh.scale, {\n    duration: 2,\n    x: 3,\n    y: 3,\n    z: 3\n  });\n  return timeline1;\n};\n\nvar intro1 = function intro1() {\n  var timeline2 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline2.to('.navbar__logo', {\n    opacity: 1,\n    ease: 'power3.out'\n  }).to('.navbar__anchortag', {\n    opacity: 1,\n    ease: \"elastic.out(13, 1)\"\n  }).to('.home__text__intro', {\n    opacity: 1,\n    duration: 1,\n    ease: \"elastic.out(13, 1)\",\n    y: \"-=5\"\n  }).to('.home__text__span', {\n    ease: \"elastic.out(20, 1)\",\n    y: \"+=1\",\n    opacity: 1\n  }).to('.home__text__welcome', {\n    ease: \"elastic.out(15, 0.3)\",\n    y: \"+=2\",\n    delay: 0.5,\n    opacity: 1\n  }).to('.sidebar', {\n    opacity: 1,\n    duration: 1\n  });\n  return timeline2;\n};\n\nvar afterEffects = function afterEffects() {\n  var _timeline3$to;\n\n  var timeline3 = new gsap__WEBPACK_IMPORTED_MODULE_0__.default.timeline();\n  timeline3.to(particlesMesh.position, (_timeline3$to = {\n    z: '150',\n    y: \"-=1\"\n  }, _defineProperty(_timeline3$to, \"y\", \"-=1\"), _defineProperty(_timeline3$to, \"duration\", 50), _defineProperty(_timeline3$to, \"repeat\", -1), _defineProperty(_timeline3$to, \"yoyo\", true), _timeline3$to));\n  return timeline3;\n};\n\nvar callback = function callback() {\n  return myTimeline.add(intro()).add(intro1()).add(afterEffects());\n};\n\nvar callItem = function callItem(callback) {\n  callback();\n};\n\ncallItem(callback);\nvar mouseY, mouseX;\ndocument.addEventListener('mousemove', function (e) {\n  mouseY = e.clientY;\n  mouseX = e.clientX;\n}); // store the mouse item.\n// when the user scrolls,\n\nvar testitem;\nvar placeholder2 = 0;\ndocument.addEventListener('scroll', function (e) {\n  testitem = window.scrollY;\n\n  if (testitem > placeholder2) {\n    moon.position.z = moon.position.z - 0.1;\n    placeholder2 = testitem;\n    console.log('scrolling down');\n  } else {\n    placeholder2 = window.scrollY;\n    moon.position.z = moon.position.z + 0.1;\n  }\n});\n\nvar animation = function animation() {\n  if (mouseY !== undefined) {\n    particlesMesh.rotation.y = mouseY * 0.0003;\n  }\n\n  requestAnimationFrame(animation);\n  renderer.render(scenes, camera);\n};\n\nvar scrollMoon = function scrollMoon() {};\n\nrenderer.setSize(window.innerWidth, window.innerHeight);\nscenes.add(moon);\nscenes.add(sphere, particlesMesh);\nvar page = document.getElementsByClassName('loading__page')[0];\npage.appendChild(renderer.domElement);\nanimation();\n\n//# sourceURL=webpack://my-webpack-project/./app/javascript/loadingpage.js?");
 
 /***/ }),
 
@@ -47,7 +80,7 @@ eval("function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iter
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./app/src/index.css\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascript/fade_in */ \"./app/javascript/fade_in.js\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascript/navbar */ \"./app/javascript/navbar.js\");\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_javascript_navbar__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _javascript_loadingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascript/loadingpage */ \"./app/javascript/loadingpage.js\");\n\n\n\n\n\n//# sourceURL=webpack://my-webpack-project/./app/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./app/src/index.css\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascript/fade_in */ \"./app/javascript/fade_in.js\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascript/navbar */ \"./app/javascript/navbar.js\");\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_javascript_navbar__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _javascript_loadingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascript/loadingpage */ \"./app/javascript/loadingpage.js\");\n/* harmony import */ var _images_normalmap_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/normalmap.jpg */ \"./app/images/normalmap.jpg\");\n/* harmony import */ var _images_surfacemoon_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/surfacemoon.jpg */ \"./app/images/surfacemoon.jpg\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://my-webpack-project/./app/src/index.js?");
 
 /***/ }),
 
@@ -157,6 +190,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -171,6 +216,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

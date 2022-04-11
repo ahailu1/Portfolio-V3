@@ -1,3 +1,13 @@
+@keyframes flicker {
+  5%, 15%, 25%, 35%, 50%, 75%, 90% {
+    color: $third-color;
+    text-shadow: 0 0 20px 0 $third-color;
+  }
+  10%, 40%, 60% {
+    color: $secondary-color;
+  }
+  
+ }
 .projects {
   @media(min-width:320px){
     height: auto;
@@ -40,16 +50,27 @@
   }
   }
   &__paragraph {
-    font-size: 0.9rem;
-    border-radius: 0.35rem;
-    padding: 1.25rem;
-    width: 100%;
-    background-color: lighten($fifth-color, 3%);
-    //border: solid $primary-color;
-
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    line-height: 1.25rem;
+   
+    @media(min-width:320px){
+      font-size: 0.9rem;
+      border-radius: 0.35rem;
+      padding: 1.25rem;
+      width: 100%;
+      background-color: lighten($fifth-color, 3%);
+      //border: solid $primary-color;
+  
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      line-height: 1.25rem;
+    }
+    @media(min-width: 720px){
+      font-size: 1rem;
+    }
+    @media(min-width: 1024px){
+      font-size: 1.25rem;
+      padding: 1.5rem;
+      opacity: 0.85;
+    }
   }
   &__header {
     width: 100%;
@@ -57,9 +78,7 @@
     text-decoration: underline $fourth-color 5px;
     //border-bottom: solid $fourth-color 4px;
     font-weight: 800;
-    margin: 0rem 0 1rem 0;
     //background-color: $fifth-color;
-    padding: 0 0 1.5rem 0;
     font-size: 2rem;
     &.one{
       text-align: left;
@@ -145,12 +164,27 @@
 
   }
   }
-
+  &__links{
+    display: flex;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+  &.video {
+   justify-content: flex-start; 
+  }
+  &.chat{
+    justify-content: flex-end;
+  }
+  }
   &__icon {
     color: $secondary-color;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0 1rem 0 0;
+  &:hover{
+    color: $third-color;
+    transition: all ease-in-out 0.5s;
   }
+  }
+
 }
 
 .projects__image__content {

@@ -1,3 +1,14 @@
+@keyframes flicker {
+  5%, 15%, 25%, 35%, 50%, 75%, 90% {
+    color: $third-color;
+    text-shadow: 0 0 20px 0 $third-color;
+  }
+  10%, 40%, 60% {
+    color: $secondary-color;
+  }
+  
+ }
+
 .about {
   @media (min-width: 320px) {
     display: flex;
@@ -38,12 +49,16 @@
     }
   }
   &__header {
+   
+    
+    
     @media (min-width: 320px) {
       line-height: 4rem;
       padding: 0rem 0 1rem 0;
       margin: 4rem 0 4rem 0;
       border-bottom: solid $fourth-color 5px;
       font-size: 4rem;
+      animation: flicker 5s linear infinite forwards;
       font-weight: 800;
     }
     @media (min-width: 768px) {
@@ -62,11 +77,12 @@
       font-weight: 400;
       background-color: $fifth-color;
       letter-spacing: 1.25px;
+      border-radius: 0.35rem 0.35rem 0 0;
       line-height: 2rem;
       font-size: 1.25rem;
     }
     @media (min-width: 968px) {
-      font-size: 0.8rem;
+      font-size: 1.25rem;
       width: 70%;
       border-bottom: solid $fourth-color;
       padding: 1.5rem 2rem 1.5rem 2rem;

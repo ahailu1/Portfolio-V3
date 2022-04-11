@@ -9,14 +9,13 @@ var technologySectionText = document.getElementsByClassName(
 
 var framework = (title, section) => {
   let documentHeight = window.innerHeight;
-  console.log(title);
   let sectionTop = title.getBoundingClientRect().top;
   if (documentHeight > sectionTop) {
     title.style.opacity = "1";
     section.style.opacity = "1";
   } else {
     title.style.opacity = "0";
-
+    
     section.style.opacity = "0";
   }
 };

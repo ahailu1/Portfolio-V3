@@ -21,6 +21,7 @@
   }
   &__heading {
     @media (min-width: 320px) {
+      animation: flicker 5s linear infinite forwards;
       line-height: 4rem;
       padding: 0rem 0 1rem 0;
       margin: 4rem 0 4rem 0;

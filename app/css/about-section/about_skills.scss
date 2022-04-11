@@ -195,8 +195,18 @@
   @media (min-width: 320px) {
     color: $secondary-color;
     font-size: 3rem;
+    animation: flicker 5s linear infinite forwards;
   }
   @media (min-width: 968px) {
     font-size: 3.25rem;
   }
 }
+@keyframes flicker {
+  5%, 15%, 25%, 35%, 50%, 75%, 90% {
+    filter: blur(5px) brightness(1)
+  }
+  10%, 40%, 60% {
+    filter: blur(5px) brightness(0.35)
+  }
+  
+ }

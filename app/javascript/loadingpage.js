@@ -11,8 +11,11 @@ scenes.add(camera);
 let particleGeometry = new THREE.BufferGeometry();
 let particles = 15000;
 const itemsArray = new Float32Array(particles * 3);
-let mapTexture = new THREE.TextureLoader().load('../app/images/normalmap1.jpg');
-let moonTexture = new THREE.TextureLoader().load('../app/images/surfacemoon.jpg');
+import img from '../images/normalmap.jpg';
+import img2 from '../images/surfacemoon1.jpg';
+
+let mapTexture = new THREE.TextureLoader().load(img);
+let moonTexture = new THREE.TextureLoader().load(img2);
 
 //new THREE.MeshStandardMaterial
 const moon = new THREE.Mesh(
@@ -23,7 +26,7 @@ const moon = new THREE.Mesh(
     map:moonTexture,
     })
         );
-const light = new THREE.AmbientLight( 0xffffff);
+const light = new THREE.AmbientLight(0xffffff);
 light.position.set(25,15,1);
 for(let i = 0; i < particles * 3; i++){
     itemsArray[i] = (Math.random() - 0.4) * (Math.random() * 45);;
@@ -140,14 +143,34 @@ document.addEventListener('mousemove', (e) => {
 mouseY = e.clientY;
 mouseX = e.clientX;
 });
+// store the mouse item.
+// when the user scrolls,
+var testitem;
+var placeholder2 = 0;
+document.addEventListener('scroll' , (e) => {
+    testitem = window.scrollY;
+    if(testitem > placeholder2){
+        moon.position.z = moon.position.z - 0.1;
+        placeholder2 = testitem;
+        console.log('scrolling down');
+    } else {
+        placeholder2 = window.scrollY;
+        moon.position.z = moon.position.z + 0.1;
 
+    }
+});
 let animation = () => {
     if(mouseY !== undefined) {
         particlesMesh.rotation.y = mouseY * 0.0003;
     }
+
     requestAnimationFrame(animation);
     renderer.render(scenes, camera);
 }
+let scrollMoon = () => {
+
+};
+
 renderer.setSize( window.innerWidth, window.innerHeight);
 scenes.add(moon);
 scenes.add(sphere, particlesMesh);
