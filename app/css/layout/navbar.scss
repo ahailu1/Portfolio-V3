@@ -41,6 +41,9 @@
     padding: 2rem 0 2rem 0;
     display: flex;
   }
+  @media(min-width: 1068px){
+    padding: 1rem 0 1rem 0;
+  }
 
   &.toggled {
     opacity: 0;

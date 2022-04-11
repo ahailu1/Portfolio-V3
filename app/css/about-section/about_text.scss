@@ -14,9 +14,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    opacity: 0;
+    opacity: 0.8;
     align-items: center;
-    padding: 0 3rem 0 4rem;
+    padding: 0 2rem 0 2rem;
     flex-direction: column-reverse;
     transition: 0.5s 0.75s all ease-in-out;
   }
@@ -75,15 +75,18 @@
   &__paragraph {
     @media (min-width: 320px) {
       font-weight: 400;
+      width: 100%;
       background-color: $fifth-color;
       letter-spacing: 1.25px;
       border-radius: 0.35rem 0.35rem 0 0;
       line-height: 2rem;
       font-size: 1.25rem;
+      padding: 3rem;
     }
     @media (min-width: 968px) {
-      font-size: 1.25rem;
-      width: 70%;
+      font-size: 0.85rem;
+      width: 100%;
+      line-height: 1.5rem;
       border-bottom: solid $fourth-color;
       padding: 1.5rem 2rem 1.5rem 2rem;
       z-index: 100;
