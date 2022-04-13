@@ -152,7 +152,6 @@ document.addEventListener('scroll' , (e) => {
     if(testitem > placeholder2){
         moon.position.z = moon.position.z - 0.1;
         placeholder2 = testitem;
-        console.log('scrolling down');
     } else {
         placeholder2 = window.scrollY;
         moon.position.z = moon.position.z + 0.1;

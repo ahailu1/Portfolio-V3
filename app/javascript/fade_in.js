@@ -5,7 +5,7 @@ var technologyTitle = document.getElementsByClassName(
 )[0];
 var technologySectionText = document.getElementsByClassName(
   "about__section skills"
-)[0];
+)[0]; 
 
 var framework = (title, section) => {
   let documentHeight = window.innerHeight;

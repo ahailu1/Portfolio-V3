@@ -102,9 +102,11 @@
 .toggled__menu{
     &.top{
         @media(min-width: 320px){
-            transform: rotateZ(407deg) translateY(1.2rem) translateX(0.4rem);
+            transform: rotateZ(407deg) translateY(1.3rem) translateX(0.55rem);
             transition: all ease-in-out 0.5s;
-    
+        }
+        @media(min-width:500px){
+            transform: rotateZ(407deg) translateY(1.5rem) translateX(0.13rem);
         }
         @media(min-width: 768px){
             transition: none;
@@ -120,6 +122,9 @@
         @media(min-width: 320px){
             transition: all ease-in-out 0.5s;
             transform: rotateZ(-47deg) translateY(-1.5rem) translateX(0.5rem);
+        }
+        @media(min-width:500px){
+            transform: rotateZ(-45deg) translateY(-1.75rem) translateX(0.3rem);
         }
         @media(min-width: 768px){
             transition: none;
