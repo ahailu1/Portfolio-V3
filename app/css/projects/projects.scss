@@ -15,7 +15,6 @@
     width: 100%;
     z-index: 100;
     flex-direction: column;
-    padding: 0 2rem 0 2rem;
   }
   @media(min-width:768px){
     width: 80%;
@@ -52,10 +51,10 @@
   &__paragraph {
    
     @media(min-width:320px){
-      font-size: 0.9rem;
+      font-size: 1rem;
       border-radius: 0.35rem;
       padding: 1.25rem;
-      width: 100%;
+      width: 80%;
       background-color: lighten($fifth-color, 3%);
       //border: solid $primary-color;
   
@@ -164,12 +163,14 @@
     z-index: 5;
     position: relative;
     border-radius: 0.5rem;    
+  }
+  @media(min-width: 768px){
     margin: 0 -3rem 0 0;
   }
   @media(min-width: 320px){
     
   }
-
+/*
     &::after{
       border-radius: 0.5rem;
       border: solid $fifth-color 2px;
@@ -183,11 +184,14 @@
       height: 100%;
       width: 100%;
       background-color: $fourth-color;
-  
     }
+    */
   &.one{
-    margin:0 0 0 -3rem;
-    width: 70%;
+    @media(min-width: 768px){
+      margin:0 0 0 -3rem;
+      width: 70%;
+    }
+  
   }
   }
 }
@@ -241,8 +245,17 @@
 }
 
 .projects__image__content {
-  width: 100%;
-  border-radius: 0.25rem;
-  //box-shadow: 0 0 5px 2px $third-color;
-  height: 100%;
+  @media(min-width: 320px){
+    border-radius: 0.25rem;
+    //box-shadow: 0 0 5px 2px $third-color;
+    width: 75vw;
+  }
+  @media(min-width: 568px){
+    width: 40vw;
+  }
+  @media(min-width: 768px){
+    width: 40vw;
+    height: auto;
+
+  }
 }

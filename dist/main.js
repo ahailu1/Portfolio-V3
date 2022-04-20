@@ -63,6 +63,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var thre
 
 /***/ }),
 
+/***/ "./app/javascript/mobilenav.js":
+/*!*************************************!*\
+  !*** ./app/javascript/mobilenav.js ***!
+  \*************************************/
+/***/ (() => {
+
+eval("var mobileHeadings = [\"home\", \"about\", \"all__projects\", \"form\"];\n\nvar item = function item(navItem, scrollLocation, index) {\n  var menuItem = document.getElementsByClassName(navItem)[index];\n  var scrollTo = document.getElementsByClassName(scrollLocation)[0];\n\n  menuItem.onclick = function () {\n    scrollTo.scrollIntoView({\n      behavior: \"smooth\",\n      block: \"end\",\n      inline: \"nearest\"\n    });\n    console.log(menuItem);\n  };\n};\n\nitem('navbar__mobile__item', 'home', 0);\nitem('navbar__mobile__item', 'about', 1);\nitem('navbar__mobile__item', 'all__projects', 2);\nitem('navbar__mobile__item', 'form', 3);\n\n//# sourceURL=webpack://my-webpack-project/./app/javascript/mobilenav.js?");
+
+/***/ }),
+
 /***/ "./app/javascript/navbar.js":
 /*!**********************************!*\
   !*** ./app/javascript/navbar.js ***!
@@ -80,7 +90,7 @@ eval("function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iter
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./app/src/index.css\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascript/fade_in */ \"./app/javascript/fade_in.js\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascript/navbar */ \"./app/javascript/navbar.js\");\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_javascript_navbar__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _javascript_loadingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascript/loadingpage */ \"./app/javascript/loadingpage.js\");\n/* harmony import */ var _images_normalmap_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/normalmap.jpg */ \"./app/images/normalmap.jpg\");\n/* harmony import */ var _images_surfacemoon_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/surfacemoon.jpg */ \"./app/images/surfacemoon.jpg\");\n\n\n\n\n\n\n\n//# sourceURL=webpack://my-webpack-project/./app/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./app/src/index.css\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../javascript/fade_in */ \"./app/javascript/fade_in.js\");\n/* harmony import */ var _javascript_fade_in__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_javascript_fade_in__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../javascript/navbar */ \"./app/javascript/navbar.js\");\n/* harmony import */ var _javascript_navbar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_javascript_navbar__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _javascript_loadingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../javascript/loadingpage */ \"./app/javascript/loadingpage.js\");\n/* harmony import */ var _images_normalmap_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/normalmap.jpg */ \"./app/images/normalmap.jpg\");\n/* harmony import */ var _images_surfacemoon_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/surfacemoon.jpg */ \"./app/images/surfacemoon.jpg\");\n/* harmony import */ var _javascript_mobilenav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../javascript/mobilenav */ \"./app/javascript/mobilenav.js\");\n/* harmony import */ var _javascript_mobilenav__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_javascript_mobilenav__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://my-webpack-project/./app/src/index.js?");
 
 /***/ }),
 

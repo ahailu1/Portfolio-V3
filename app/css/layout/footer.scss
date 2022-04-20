@@ -2,12 +2,13 @@
   @media (min-width: 320px) {
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    height: 42vh;
     background-image: url("../images/footerbg.png");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 200;
     align-items: center;
+    margin: 0 1rem 0 2rem;
     justify-content: flex-end;
     background-position: center center;
   }
@@ -20,6 +21,7 @@
   @media (min-width: 1400px) {
     margin: 10rem 0 0 200px;
     opacity: 0.85;
+    height: 60vh;
     width: 80%;
   }
 
